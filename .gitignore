@@ -1,0 +1,12 @@
+
+# Fonts excluded
+/**/*.ttf
+
+# Playground excluded
+playground
+playground/**/*.*
+
+# Intellij files
+.idea
+.idea/**/*.*
+
