@@ -1,0 +1,89 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--bs-body-color) !important;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  color: var(--bs-body-color) !important;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Gold icon */
+svg.gold {
+  color: #FFCB4C !important;
+}
+
+/* Reviews */
+h1.title-review {
+  font-family: Urbanist, sans-serif;
+  font-weight: bold;
+
+}
+p.name-review {
+  font-family: Urbanist, sans-serif;
+  font-weight: bold;
+}
+p.body-review {
+  font-family: Urbanist, sans-serif;
+}
+
+/* Next and Previous buttons */
+.carousel-button {
+  /** background-color: var(--bs-primary-text-emphasis) !important;***/
+  color: var(--bs-dark-text-emphasis) !important;
+}
+
+.carousel-bottom-button {
+  background-color: var(--bs-primary-text-emphasis) !important;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
