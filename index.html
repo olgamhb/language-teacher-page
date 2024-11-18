@@ -1,589 +1,661 @@
 <!DOCTYPE html>
 <html lang="es" xml:lang="es">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
-
-    <link rel="icon" href="src/ico/logo_esp.ico">
-    <meta name="theme-color" content="#ffffff">
-
-    <title>Let's Talk - Speak Catalan and Spanish Confidently</title>
-
-    <meta name="description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
-    <meta name="keywords" content="spanish, immersion, language, games, private, tutoring, learning">
-    <meta name="author" content="Olga Muñoz Hernández">
-    <meta name="copyright" content="Let's Talk">
-    <meta name="application-name" content="Let's Talk">
-
-    <meta property="og:title" content="Speak Catalan and Spanish Confidently">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxN3x8bGFuZ3VhZ2UlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzI4NzYyNjIwfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200">
-    <meta property="og:url" content="https://letstalkbcn.com">
-    <meta property="og:description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Speak Catalan and Spanish Confidently">
-    <meta name="twitter:description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxN3x8bGFuZ3VhZ2UlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzI4NzYyNjIwfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200">
-
-    <meta name="next-head-count" content="22">
-
-    <link href="src/css/main.css" rel="stylesheet">
-    <link href="src/css/bootstrap.min.css" rel="stylesheet">
-    <link href="src/css/carousel.css" rel="stylesheet">
-    <link href="src/css/docssearch3.css" rel="stylesheet">
-    <link href="src/css/logos.css" rel="stylesheet">
-    <link href="src/css/separator.css" rel="stylesheet">
-
-
-    <script src="src/js/color-modes.js" ></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-  </head>
-  <body>
-    <!-- Light/Dark mode toggle -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-        </symbol>
-    </svg>
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center button-switch-dark-light-mode"
-                id="bd-theme"
-                type="button"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em" fill="white"><use href="#circle-half"></use></svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Icons -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="letstalk-esp" viewBox="0 0 1556.86 1305.91">
-            <title>Let's Talk!</title>
-            <path class="esp-cls-1" d="M2925.38,588.23c-180.24-118-339.88,50-400.41,183.81s-134,211.19-353.91,300.8c-152.68,62.22-220.86,238.89-151.87,371s251.42,305.38,574.5,226.09c308.22-75.64,486.21-362.7,518.91-614.11C3137.76,862.3,3067.53,681.28,2925.38,588.23Z" transform="translate(-1671.5 -383.99)"/>
-            <path class="esp-cls-2" d="M2656.21,1362.7c-11.28-107.5-102.35-155.3-185.45-180.86S2308,1113.52,2217.89,935.22s-238.5-183.62-348.81-99.79c-46.14,35.05-79.07,108.33-71.79,175.16,5.2,47.77,6,98.45-22.54,157.1s-131.93,100.34-95.61,213.22c28.77,89.4,171.82,169,310.82,75.53s208-57,264.82-3.76c57.44,53.81,141.39,123.43,242.74,111.24C2584.48,1553.45,2667.5,1470.19,2656.21,1362.7Z" transform="translate(-1671.5 -383.99)"/>
-            <path class="esp-cls-3" d="M1991.53,1512.22c100.5,76.76,247.65,53.84,421.68-53,94.67-58.1,213.74-56.58,330.14-14.65,160.19,57.71,320.47,51.1,414.56-75.55s150-388.65-209.93-506c-130.85-42.68-263.24-161.77-334.27-303.21-75.35-150-177.52-182.07-285.83-174.86-63.41,4.22-217,51.89-253.16,201-42,173,69,305.8-58.22,505.31C1895.57,1280.8,1874.69,1423,1991.53,1512.22Z" transform="translate(-1671.5 -383.99)"/>
-            <text class="esp-cls-4" transform="translate(501.58 605.73)">L<tspan class="esp-cls-5" x="160.22" y="0">e</tspan>
-                <tspan class="esp-cls-6" x="292.88" y="0">t</tspan>
-                <tspan class="esp-cls-7" x="409.46" y="0">’</tspan>
-                <tspan x="483.02" y="0">s</tspan>
-                <tspan class="esp-cls-8" x="0" y="216.21">T</tspan>
-                <tspan x="164.3" y="216.21">alk</tspan>
-            </text>
-            <path class="esp-cls-9" d="M2990.73,1038.58A156.21,156.21,0,0,0,2853.57,1120h274.31A156.19,156.19,0,0,0,2990.73,1038.58Z" transform="translate(-1671.5 -383.99)"/>
-            <path class="esp-cls-9" d="M2990.73,1351a156.18,156.18,0,0,0,137.15-81.36H2853.57A156.2,156.2,0,0,0,2990.73,1351Z" transform="translate(-1671.5 -383.99)"/>
-            <path class="esp-cls-10" d="M2853.57,1269.68h274.31a156.42,156.42,0,0,0,0-149.73H2853.57a156.42,156.42,0,0,0,0,149.73Z" transform="translate(-1671.5 -383.99)"/>
-        </symbol>
-        <symbol id="letstalk-cat" viewBox="0 0 1551.41 1301.34">
-            <title>Let's Talk!</title>
-            <path class="cat-cls-1" d="M2929.64,584.53C2750,467,2591,634.4,2530.63,767.7S2397.06,978.15,2178,1067.44c-152.15,62-220.09,238.06-151.34,369.68s250.54,304.31,572.49,225.3c307.14-75.37,484.51-361.43,517.09-612C3141.28,857.64,3071.29,677.25,2929.64,584.53Z" transform="translate(-1680.14 -381)"/>
-            <path class="cat-cls-2" d="M2661.41,1356.29c-11.24-107.12-102-154.76-184.8-180.23s-162.21-68.08-252-245.76S1987,747.33,1877,830.86c-46,34.93-78.79,107.95-71.54,174.55,5.18,47.61,6,98.11-22.46,156.55s-131.46,100-95.27,212.47c28.67,89.09,171.22,168.38,309.73,75.27s207.27-56.8,263.89-3.75c57.24,53.62,140.9,123,241.89,110.85C2589.94,1546.37,2672.66,1463.41,2661.41,1356.29Z" transform="translate(-1680.14 -381)"/>
-            <path class="cat-cls-3" d="M1999.06,1505.28c100.15,76.5,246.78,53.65,420.2-52.78,94.34-57.9,213-56.39,329-14.6,159.64,57.5,319.35,50.93,413.12-75.28s149.44-387.3-209.2-504.28c-130.39-42.53-262.31-161.21-333.1-302.16-75.09-149.49-176.9-181.43-284.83-174.24C2271,386.15,2118,433.64,2082,582.18c-41.81,172.44,68.8,304.73-58,503.55C1903.43,1274.68,1882.62,1416.33,1999.06,1505.28Z" transform="translate(-1680.14 -381)"/>
-            <rect class="cat-cls-3" x="1159.3" y="654.32" width="311.95" height="311.95"/>
-            <rect class="cat-cls-4" x="1159.35" y="653.91" width="311.85" height="311.85"/>
-            <rect class="cat-cls-5" x="1159.35" y="688.56" width="311.85" height="34.65"/>
-            <rect class="cat-cls-5" x="1159.35" y="758.09" width="311.85" height="34.65"/>
-            <rect class="cat-cls-5" x="1159.35" y="827.85" width="311.85" height="34.65"/>
-            <rect class="cat-cls-5" x="1159.35" y="897.39" width="311.85" height="34.65"/>
-            <path class="cat-cls-3" d="M2997.49,934.28c-119.51,0-216.38,111.45-216.38,248.93s96.87,248.94,216.38,248.94,216.38-111.45,216.38-248.94S3117,934.28,2997.49,934.28Zm-2.07,412.94a155.93,155.93,0,1,1,155.92-155.92A155.92,155.92,0,0,1,2995.42,1347.22Z" transform="translate(-1680.14 -381)"/>
-            <text class="cat-cls-6" transform="translate(499.83 603.61)">L<tspan class="cat-cls-7" x="159.66" y="0">e</tspan>
-                <tspan class="cat-cls-8" x="291.85" y="0">t</tspan>
-                <tspan class="cat-cls-9" x="408.03" y="0">’</tspan>
-                <tspan x="481.33" y="0">s</tspan>
-                <tspan class="cat-cls-10" x="0" y="215.45">T</tspan>
-                <tspan x="163.73" y="215.45">alk</tspan>
-            </text>
-        </symbol>
-        <symbol id="home" viewBox="0 0 16 16">
-            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-        </symbol>
-        <symbol id="speedometer2" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-            <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
-        </symbol>
-        <symbol id="table" viewBox="0 0 16 16">
-            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
-        </symbol>
-        <symbol id="people-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-        </symbol>
-        <symbol id="grid" viewBox="0 0 16 16">
-            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-        </symbol>
-        <symbol id="star" viewBox="0 0 16 16">
-            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-        </symbol>
-        <symbol id="star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </symbol>
-        <symbol id="star-half-fill" viewBox="0 0 16 16">
-            <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
-        </symbol>
-        <symbol id="chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-        </symbol>
-        <symbol id="chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-        </symbol>
-    </svg>
-
-
-    <main>
-      <!-- Header -->
-      <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2 d-inline-block" width="40" height="32">
-                <use xlink:href="#letstalk-esp"/>
-            </svg>
-            <span class="fs-4">Simple header</span>
-          </a>
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#reviews-section" class="nav-link">Reviews</a></li>
-            <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          </ul>
-        </header>
-      </div>
-
-      <!-- Reviews class section -->
-      <div id="reviews-section" class="container-fluid" style="padding-right: 0; padding-left: 0;">
-        <div id="myReviewCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-touch="false">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="0" class="active carousel-bottom-button" aria-current="true" aria-label="Review 1"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="1" class="carousel-bottom-button" aria-label="Review 2"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="2" class="carousel-bottom-button" aria-label="Review 3"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="3" class="carousel-bottom-button" aria-label="Review 4"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="4" class="carousel-bottom-button" aria-label="Review 5"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="5" class="carousel-bottom-button" aria-label="Review 6"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="6" class="carousel-bottom-button" aria-label="Review 7"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="7" class="carousel-bottom-button" aria-label="Review 8"></button>
-            <button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="8" class="carousel-bottom-button" aria-label="Review 9"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                   width="100%"
-                   height="100%"
-                   opacity="15%"
-                   xmlns="http://www.w3.org/2000/svg"
-                   aria-hidden="true"
-                   preserveAspectRatio="none"
-                   focusable="false"
-                   style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                <div class="carousel-caption justify-content-center align-items-center text-center">
-                  <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                    <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-01-512x512.png" />
-                  </svg>
-                  <h2 class="title-review">Elizabeth Avalos</h2>
-                  <p>
-                      <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                  </p>
-                  <p class="body-review">
-                      Las clases de conversación con Olga me ayudaron muchísimo a mejorar mi castellano! A pesar de mi nivel bastante alto, me faltaba la fluidez y la confianza para hablar sin vergüenza, pero gracias a Olga ya me encuentro más segura con mis habilidades. Olga es una profesora muy amable y comprensiva y recomiendo sus clases a todas personas de cualquier nivel!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                   width="100%"
-                   height="100%"
-                   opacity="15%"
-                   xmlns="http://www.w3.org/2000/svg"
-                   aria-hidden="true"
-                   preserveAspectRatio="xMidYMid slice"
-                   focusable="false"
-                   style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                <div class="carousel-caption justify-content-center align-items-center text-center">
-                  <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                    <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-man-01-512x512.png" />
-                  </svg>
-                  <h2 class="title-review">Giovanni</h2>
-                  <p>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          </p>
-                  <p class="body-review">
-                      Ha sido un placer aprender catalán con Olga durante varias semanas. Hace las lecciones fáciles, simples y muy prácticas. Muy recomendable y demasiados agradecidos por haberla tenido.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                   width="100%"
-                   height="100%"
-                   opacity="15%"
-                   xmlns="http://www.w3.org/2000/svg"
-                   aria-hidden="true"
-                   preserveAspectRatio="none"
-                   focusable="false"
-                   style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                <div class="carousel-caption justify-content-center align-items-center text-center">
-                  <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                    <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-02-512x512.png" />
-                  </svg>
-                  <h2 class="title-review">Cyrielle</h2>
-                  <p>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                              <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          </p>
-                  <p class="body-review">
-                      Olga is very friendly and easy going. Her classes are very entertaining and the subjects are fun. I am really happy with my experience and I recommend its courses to anyone who wants to practice their Spanish in a relaxing atmosphere.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="xMidYMid slice"
-                     focusable="false"
-                   style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                <div class="carousel-caption justify-content-center align-items-center text-center">
-                  <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                    <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-03-512x512.png" />
-                  </svg>
-                  <h2 class="title-review">Oleksandra</h2>
-                  <p>
-                    <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                    <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                    <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                    <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                    <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                  </p>
-                  <p class="body-review">
-                      Excelente profesora con capacidad de adaptar la clase a las necesidades y al nivel del alumno. Sus clases son siempre muy dinámicas y activas. Es paciente, dinámica y alegre. Siempre aprendo mucho en cada clase y hablamos sobre todo, aunque antes era un poco tìmida para hablar Español.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="none"
-                     focusable="false"
-                     style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                  <div class="carousel-caption justify-content-center align-items-center text-center">
-                      <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                        <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-man-02-512x512.png" />
-                      </svg>
-                      <h2 class="title-review">Pablo Aragón Mureddu</h2>
-                      <p>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      </p>
-                      <p class="body-review">
-                          L'Olga Muñoz és una gran mestra amb la qual he après molt de català. Sempre dóna les classes amb molta energia i un somriure. A més, cerca que l'alumne se senti còmode, aprengui i es quedi sense dubtes en tot moment. Recomano molt les classes
-                      </p>
-                  </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-                <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="xMidYMid slice"
-                     focusable="false"
-                     style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-                </svg>
-              <div class="container">
-                  <div class="carousel-caption justify-content-center align-items-center text-center">
-                      <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                        <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-04-512x512.png" />
-                      </svg>
-                      <h2 class="title-review">Angie Grimshaw</h2>
-                      <p>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      </p>
-                      <p class="body-review">
-                          Desde hace las clases con Olga tengo mucha más confianza cuando hablo español. Las clases son divertidas y hablamos sobre temas interesantes. Olga es una gran profesora y una persona muy amable. Definitivamente recomendaría clases con Olga. Since the classes with Olga I have much more confidence when I speak Spanish. The classes are fun and we talk about interesting topics. Olga is a great teacher and a lovely person. I would definitely recommend classes with Olga.
-                      </p>
-                  </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
-              <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="none"
-                     focusable="false"
-                     style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                  <div class="carousel-caption justify-content-center align-items-center text-center">
-                      <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                          <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                          <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-05-512x512.png" />
-                      </svg>
-                      <h2 class="title-review">Anna</h2>
-                      <p>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      </p>
-                      <p class="body-review">
-                          I love having classes with Olga. It is like meeting a friend for coffee - except I am learning lots! She is always so patient and kind and we have lots of fun. She is very good at explaining things and comes up with interesting topics to talk about. She is also very organised - always on time and sends reminders before the class which I find very helpful. Thank you Olga. My Spanish has improved a lot and my confidence grown hugely since I started going to your classes.
-                      </p>
-                  </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="3000">
-                <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="xMidYMid slice"
-                     focusable="false"
-                     style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-                </svg>
-              <div class="container">
-                  <div class="carousel-caption justify-content-center align-items-center text-center">
-                      <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                          <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                          <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-06-512x512.png" />
-                      </svg>
-                      <h2 class="title-review">Tarryn</h2>
-                      <p>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      </p>
-                      <p class="body-review">
-                          Olga is FANTASTIC! She is very easy-going and always creates a positive learning environment. 100% recommend taking her classes, you will learn a lot !
-                      </p>
-                  </div>
-              </div>
-            </div>
-            <div class="carousel-item align-items-center justify-content-center" data-bs-interval="3000">
-              <svg class="bd-placeholder-img"
-                     width="100%"
-                     height="100%"
-                     opacity="15%"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true"
-                     preserveAspectRatio="none"
-                     focusable="false"
-                     style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
-              </svg>
-              <div class="container">
-                  <div class="carousel-caption justify-content-center align-items-center text-center">
-                      <svg height="250" width="300" xmlns="http://www.w3.org/2000/svg">
-                          <circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
-                          <image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-07-512x512.png" />
-                      </svg>
-                      <h2 class="title-review">Polina</h2>
-                      <p>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                          <svg class="bi me-2 d-inline-block gold" width="32" height="32"><use xlink:href="#star-fill"/></svg>
-                      </p>
-                      <p class="body-review">
-                          My experience with Olga is amazing! I was looking for some teacher with whom I could practice my speaking skills in Spanish without homework or writing exercises and I found Olga. Our classes are very intense, full of laugh and joy. Olga always has topics to talk about, we constantly stay in contact and I see a lot of progress in my speech. !Muchas gracias Olga!
-                      </p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev carousel-button" type="button" data-bs-target="#myReviewCarousel" data-bs-slide="prev">
-            <svg class="bi me-2 d-inline-block" width="40" height="32"><use xlink:href="#chevron-left"/></svg>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next carousel-button" type="button" data-bs-target="#myReviewCarousel" data-bs-slide="next">
-              <svg class="bi me-2 d-inline-block" width="40" height="32"><use xlink:href="#chevron-right"/></svg>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-      <hr class="rounded">
-
-      <!-- Contact section -->
-      <div id="contact-section" class="container">
-        <h2></h2>
-        <h2 class="mb-3">Tus Clases Particulares</h2>
-        <p>
-            Si lo deseas, puedes consultar contactar conmigo o reservar una clase a través de la plataforma de 'Tus Clases Particulares':
-        </p>
-        <div class="justify-content-center d-flex flex-xxl-nowrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap flex-wrap">
-            <!-- Tusclasesparticulares Reviews v.1.0.1. Copy this code and paste in your HTML -->
-            <script>
-                (function (i, s, o, g, a, m){
-                    a = s.createElement(o);
-                    m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                }(window, document, 'script', 'https://d1reana485161v.cloudfront.net/widget-client-reviews_jq.min.js?v=1745'));
-            </script>
-            <div
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+		
+		<link rel="icon" href="src/ico/logo_esp.ico">
+		<meta name="theme-color" content="#ffffff">
+		
+		<title>Let's Talk - Speak Catalan and Spanish Confidently</title>
+		
+		<meta name="description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
+		<meta name="keywords" content="spanish, immersion, language, games, private, tutoring, learning">
+		<meta name="author" content="Olga Muñoz Hernández">
+		<meta name="copyright" content="Let's Talk">
+		<meta name="application-name" content="Let's Talk">
+		
+		<meta property="og:title" content="Speak Catalan and Spanish Confidently">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxN3x8bGFuZ3VhZ2UlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzI4NzYyNjIwfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200">
+		<meta property="og:url" content="https://letstalkbcn.com">
+		<meta property="og:description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Speak Catalan and Spanish Confidently">
+		<meta name="twitter:description" content="Join us at Let's Talk for an engaging and interactive language-learning experience in Barcelona! Our fun classes emphasize speaking skills through real-life conversations, games, and cultural activities. Start your journey to fluency today and enjoy learning in a lively environment!">
+		<meta name="twitter:image" content="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxN3x8bGFuZ3VhZ2UlMjBsZWFybmluZ3xlbnwwfDB8fHwxNzI4NzYyNjIwfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200">
+		
+		<meta name="next-head-count" content="22">
+		
+		<link href="src/css/main.css" rel="stylesheet">
+		<link href="src/css/bootstrap.min.css" rel="stylesheet">
+		<link href="src/css/carousel.css" rel="stylesheet">
+		<link href="src/css/docssearch3.css" rel="stylesheet">
+		<link href="src/css/logos.css" rel="stylesheet">
+		<link href="src/css/separator.css" rel="stylesheet">
+		
+		
+		<script src="src/js/color-modes.js" ></script>
+		
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+		</style>
+	</head>
+	<body>
+		<!-- Light/Dark mode toggle -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+			<symbol id="check2" viewBox="0 0 16 16">
+				<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+			</symbol>
+			<symbol id="circle-half" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+			</symbol>
+			<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+				<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+				<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+			</symbol>
+			<symbol id="sun-fill" viewBox="0 0 16 16">
+				<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+			</symbol>
+		</svg>
+		<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+			<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center button-switch-dark-light-mode"
+			id="bd-theme"
+			type="button"
+			aria-expanded="false"
+			data-bs-toggle="dropdown"
+			aria-label="Toggle theme (auto)">
+				<svg class="bi my-1 theme-icon-active" width="1em" height="1em" fill="white"><use href="#circle-half"></use></svg>
+				<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+						<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+						Light
+						<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+						<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+						Dark
+						<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+						<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+						Auto
+						<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+					</button>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- Icons -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+			<symbol id="letstalk-esp" viewBox="0 0 1556.86 1305.91">
+				<title>Let's Talk!</title>
+				<path class="esp-cls-1" d="M2925.38,588.23c-180.24-118-339.88,50-400.41,183.81s-134,211.19-353.91,300.8c-152.68,62.22-220.86,238.89-151.87,371s251.42,305.38,574.5,226.09c308.22-75.64,486.21-362.7,518.91-614.11C3137.76,862.3,3067.53,681.28,2925.38,588.23Z" transform="translate(-1671.5 -383.99)"/>
+				<path class="esp-cls-2" d="M2656.21,1362.7c-11.28-107.5-102.35-155.3-185.45-180.86S2308,1113.52,2217.89,935.22s-238.5-183.62-348.81-99.79c-46.14,35.05-79.07,108.33-71.79,175.16,5.2,47.77,6,98.45-22.54,157.1s-131.93,100.34-95.61,213.22c28.77,89.4,171.82,169,310.82,75.53s208-57,264.82-3.76c57.44,53.81,141.39,123.43,242.74,111.24C2584.48,1553.45,2667.5,1470.19,2656.21,1362.7Z" transform="translate(-1671.5 -383.99)"/>
+				<path class="esp-cls-3" d="M1991.53,1512.22c100.5,76.76,247.65,53.84,421.68-53,94.67-58.1,213.74-56.58,330.14-14.65,160.19,57.71,320.47,51.1,414.56-75.55s150-388.65-209.93-506c-130.85-42.68-263.24-161.77-334.27-303.21-75.35-150-177.52-182.07-285.83-174.86-63.41,4.22-217,51.89-253.16,201-42,173,69,305.8-58.22,505.31C1895.57,1280.8,1874.69,1423,1991.53,1512.22Z" transform="translate(-1671.5 -383.99)"/>
+				<text class="esp-cls-4" transform="translate(501.58 605.73)">L<tspan class="esp-cls-5" x="160.22" y="0">e</tspan>
+					<tspan class="esp-cls-6" x="292.88" y="0">t</tspan>
+					<tspan class="esp-cls-7" x="409.46" y="0">’</tspan>
+					<tspan x="483.02" y="0">s</tspan>
+					<tspan class="esp-cls-8" x="0" y="216.21">T</tspan>
+					<tspan x="164.3" y="216.21">alk</tspan>
+				</text>
+				<path class="esp-cls-9" d="M2990.73,1038.58A156.21,156.21,0,0,0,2853.57,1120h274.31A156.19,156.19,0,0,0,2990.73,1038.58Z" transform="translate(-1671.5 -383.99)"/>
+				<path class="esp-cls-9" d="M2990.73,1351a156.18,156.18,0,0,0,137.15-81.36H2853.57A156.2,156.2,0,0,0,2990.73,1351Z" transform="translate(-1671.5 -383.99)"/>
+				<path class="esp-cls-10" d="M2853.57,1269.68h274.31a156.42,156.42,0,0,0,0-149.73H2853.57a156.42,156.42,0,0,0,0,149.73Z" transform="translate(-1671.5 -383.99)"/>
+			</symbol>
+			<symbol id="letstalk-cat" viewBox="0 0 1551.41 1301.34">
+				<title>Let's Talk!</title>
+				<path class="cat-cls-1" d="M2929.64,584.53C2750,467,2591,634.4,2530.63,767.7S2397.06,978.15,2178,1067.44c-152.15,62-220.09,238.06-151.34,369.68s250.54,304.31,572.49,225.3c307.14-75.37,484.51-361.43,517.09-612C3141.28,857.64,3071.29,677.25,2929.64,584.53Z" transform="translate(-1680.14 -381)"/>
+				<path class="cat-cls-2" d="M2661.41,1356.29c-11.24-107.12-102-154.76-184.8-180.23s-162.21-68.08-252-245.76S1987,747.33,1877,830.86c-46,34.93-78.79,107.95-71.54,174.55,5.18,47.61,6,98.11-22.46,156.55s-131.46,100-95.27,212.47c28.67,89.09,171.22,168.38,309.73,75.27s207.27-56.8,263.89-3.75c57.24,53.62,140.9,123,241.89,110.85C2589.94,1546.37,2672.66,1463.41,2661.41,1356.29Z" transform="translate(-1680.14 -381)"/>
+				<path class="cat-cls-3" d="M1999.06,1505.28c100.15,76.5,246.78,53.65,420.2-52.78,94.34-57.9,213-56.39,329-14.6,159.64,57.5,319.35,50.93,413.12-75.28s149.44-387.3-209.2-504.28c-130.39-42.53-262.31-161.21-333.1-302.16-75.09-149.49-176.9-181.43-284.83-174.24C2271,386.15,2118,433.64,2082,582.18c-41.81,172.44,68.8,304.73-58,503.55C1903.43,1274.68,1882.62,1416.33,1999.06,1505.28Z" transform="translate(-1680.14 -381)"/>
+				<rect class="cat-cls-3" x="1159.3" y="654.32" width="311.95" height="311.95"/>
+				<rect class="cat-cls-4" x="1159.35" y="653.91" width="311.85" height="311.85"/>
+				<rect class="cat-cls-5" x="1159.35" y="688.56" width="311.85" height="34.65"/>
+				<rect class="cat-cls-5" x="1159.35" y="758.09" width="311.85" height="34.65"/>
+				<rect class="cat-cls-5" x="1159.35" y="827.85" width="311.85" height="34.65"/>
+				<rect class="cat-cls-5" x="1159.35" y="897.39" width="311.85" height="34.65"/>
+				<path class="cat-cls-3" d="M2997.49,934.28c-119.51,0-216.38,111.45-216.38,248.93s96.87,248.94,216.38,248.94,216.38-111.45,216.38-248.94S3117,934.28,2997.49,934.28Zm-2.07,412.94a155.93,155.93,0,1,1,155.92-155.92A155.92,155.92,0,0,1,2995.42,1347.22Z" transform="translate(-1680.14 -381)"/>
+				<text class="cat-cls-6" transform="translate(499.83 603.61)">L<tspan class="cat-cls-7" x="159.66" y="0">e</tspan>
+					<tspan class="cat-cls-8" x="291.85" y="0">t</tspan>
+					<tspan class="cat-cls-9" x="408.03" y="0">’</tspan>
+					<tspan x="481.33" y="0">s</tspan>
+					<tspan class="cat-cls-10" x="0" y="215.45">T</tspan>
+					<tspan x="163.73" y="215.45">alk</tspan>
+				</text>
+			</symbol>
+			<symbol id="home" viewBox="0 0 16 16">
+				<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+			</symbol>
+			<symbol id="speedometer2" viewBox="0 0 16 16">
+				<path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+				<path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+			</symbol>
+			<symbol id="table" viewBox="0 0 16 16">
+				<path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+			</symbol>
+			<symbol id="people-circle" viewBox="0 0 16 16">
+				<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+				<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+			</symbol>
+			<symbol id="grid" viewBox="0 0 16 16">
+				<path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+			</symbol>
+			<symbol id="star" viewBox="0 0 16 16">
+				<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+			</symbol>
+			<symbol id="star-fill" viewBox="0 0 16 16">
+				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</symbol>
+			<symbol id="star-half-fill" viewBox="0 0 16 16">
+				<path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+			</symbol>
+			<symbol id="chevron-right" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+			</symbol>
+			<symbol id="chevron-left" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+			</symbol>
+		</svg>
+		
+		
+		<main>
+			<!-- Header -->
+			<div class="container">
+				<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+					<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+						<svg class="bi me-2 d-inline-block" width="40" height="32">
+							<use xlink:href="#letstalk-esp"/>
+						</svg>
+						<span class="fs-4">Simple header</span>
+					</a>
+					<ul class="nav nav-pills">
+						<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+						<li class="nav-item"><a href="#reviews-section" class="nav-link">Reviews</a></li>
+						<li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+					</ul>
+				</header>
+			</div>
+			
+			<!-- Reviews class section -->
+			<div id="reviews-section" class="container-fluid" style="padding-right: 0; padding-left: 0;">
+				<div id="myReviewCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-touch="false">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="0" class="active carousel-bottom-button" aria-current="true" aria-label="Review 1"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="1" class="carousel-bottom-button" aria-label="Review 2"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="2" class="carousel-bottom-button" aria-label="Review 3"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="3" class="carousel-bottom-button" aria-label="Review 4"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="4" class="carousel-bottom-button" aria-label="Review 5"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="5" class="carousel-bottom-button" aria-label="Review 6"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="6" class="carousel-bottom-button" aria-label="Review 7"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="7" class="carousel-bottom-button" aria-label="Review 8"></button>
+						<button type="button" data-bs-target="#myReviewCarousel" data-bs-slide-to="8" class="carousel-bottom-button" aria-label="Review 9"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="none"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-01-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Elizabeth Avalos</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Las clases de conversación con Olga me ayudaron muchísimo a mejorar mi castellano! A pesar de mi nivel bastante alto, me faltaba la fluidez y la confianza para hablar sin vergüenza, pero gracias a Olga ya me encuentro más segura con mis habilidades. Olga es una profesora muy amable y comprensiva y recomiendo sus clases a todas personas de cualquier nivel!
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="xMidYMid slice"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-man-01-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Giovanni</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Ha sido un placer aprender catalán con Olga durante varias semanas. Hace las lecciones fáciles, simples y muy prácticas. Muy recomendable y demasiados agradecidos por haberla tenido.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="none"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-02-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Cyrielle</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Olga is very friendly and easy going. Her classes are very entertaining and the subjects are fun. I am really happy with my experience and I recommend its courses to anyone who wants to practice their Spanish in a relaxing atmosphere.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="xMidYMid slice"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-03-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Oleksandra</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Excelente profesora con capacidad de adaptar la clase a las necesidades y al nivel del alumno. Sus clases son siempre muy dinámicas y activas. Es paciente, dinámica y alegre. Siempre aprendo mucho en cada clase y hablamos sobre todo, aunque antes era un poco tìmida para hablar Español.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="none"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-man-02-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Pablo Aragón Mureddu</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										L'Olga Muñoz és una gran mestra amb la qual he après molt de català. Sempre dóna les classes amb molta energia i un somriure. A més, cerca que l'alumne se senti còmode, aprengui i es quedi sense dubtes en tot moment. Recomano molt les classes
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="xMidYMid slice"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-04-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Angie Grimshaw</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Desde hace las clases con Olga tengo mucha más confianza cuando hablo español. Las clases son divertidas y hablamos sobre temas interesantes. Olga es una gran profesora y una persona muy amable. I would definitely recommend classes with Olga.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="4000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="none"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-05-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Anna</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										I love having classes with Olga. It is like meeting a friend for coffee - except I am learning lots! She is always so patient and kind and we have lots of fun. She is very good at explaining things and comes up with interesting topics to talk about. Thank you Olga. My Spanish has improved a lot and my confidence grown hugely since I started going to your classes.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="3000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="xMidYMid slice"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-bp.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-06-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Tarryn</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										Olga is FANTASTIC! She is very easy-going and always creates a positive learning environment. 100% recommend taking her classes, you will learn a lot !
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item align-items-center justify-content-center" data-bs-interval="3000">
+							<svg class="bd-placeholder-img"
+							width="100%"
+							height="100%"
+							opacity="15%"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+							preserveAspectRatio="none"
+							focusable="false"
+							style="background-image: url('src/img/backgrounds/bg-circles-yo.png');background-size: 100vw 100vh;background-repeat: no-repeat">
+							</svg>
+							<div class="container">
+								<div class="carousel-caption justify-content-center align-items-center text-center">
+									<div class="svg-review-container justify-content-center align-items-center">
+										<svg
+										width="auto"
+										height="100%"
+										viewBox="0 0 300 230"
+										xmlns="http://www.w3.org/2000/svg"
+										preserveAspectRatio="xMidYMid meet"
+										style="max-height: 100%;padding-bottom: 3vw;">
+											<circle r="105" cx="150" cy="120" fill="white" style="stroke-width: 1; stroke: lightgray;" />
+											<image x="0" y="15" width="300" height="200" href="src/img/avatars/avatar-woman-07-512x512.png" />
+										</svg>
+									</div>
+									<h2 class="title-review">Polina</h2>
+									<p>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+										<svg class="bi me-2 d-inline-block gold" viewBox="0 0 32 32"><use xlink:href="#star-fill"/></svg>
+									</p>
+									<p class="body-review">
+										My experience with Olga is amazing! I was looking for some teacher with whom I could practice my speaking skills in Spanish without homework or writing exercises and I found Olga. Our classes are very intense, full of laugh and joy. Olga always has topics to talk about, we constantly stay in contact and I see a lot of progress in my speech. !Muchas gracias Olga!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev carousel-button" type="button" data-bs-target="#myReviewCarousel" data-bs-slide="prev">
+						<svg class="bi me-2 d-inline-block" width="40" height="32"><use xlink:href="#chevron-left"/></svg>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next carousel-button" type="button" data-bs-target="#myReviewCarousel" data-bs-slide="next">
+						<svg class="bi me-2 d-inline-block" width="40" height="32"><use xlink:href="#chevron-right"/></svg>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+			
+			<hr class="rounded">
+			
+			<!-- Contact section -->
+			<div id="contact-section" class="container">
+				<h2></h2>
+				<h2 class="mb-3">Tus Clases Particulares</h2>
+				<p>
+					Si lo deseas, puedes consultar contactar conmigo o reservar una clase a través de la plataforma de 'Tus Clases Particulares':
+				</p>
+				<div class="justify-content-center d-flex flex-xxl-nowrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap flex-wrap">
+					<!-- Tusclasesparticulares Reviews v.1.0.1. Copy this code and paste in your HTML -->
+					<script>
+						(function (i, s, o, g, a, m){
+							a = s.createElement(o);
+							m = s.getElementsByTagName(o)[0];
+							a.async = 1;
+							a.src = g;
+							m.parentNode.insertBefore(a, m)
+						}(window, document, 'script', 'https://d1reana485161v.cloudfront.net/widget-client-reviews_jq.min.js?v=1745'));
+					</script>
+					<div
                     id="my_client_reviews_widget"
                     data-centro="olga-barcelona-capital"
                     data-domain="https://www.tusclasesparticulares.com"
                     data-cdn="https://d1reana485161v.cloudfront.net/"
                     data-css-version="1947"
                     style="width:auto !important;min-width:unset !important;max-width:unset !important;"
-            >
-                <a href="https://www.tusclasesparticulares.com/academia/olga-barcelona-capital.aspx" target="_blank">
-                    <img src="https://d1reana485161v.cloudfront.net/i/logo_tusclases_v3@2x.png" width="100" height="38" alt="Clases particulares" />
-                </a>
-            </div>
-            <!-- End Widget -->
-            <!-- Tusclasesparticulares Booking v.1.0.1. Copy this code and paste in your HTML -->
-            <script>
-                (function (i, s, o, g, a, m){
-                    a = s.createElement(o);
-                    m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m);
-                }(window, document, 'script', 'https://d1reana485161v.cloudfront.net/widget-client_jq.min.js?v=1745'));
-            </script>
-            <div
+					>
+						<a href="https://www.tusclasesparticulares.com/academia/olga-barcelona-capital.aspx" target="_blank">
+							<img src="https://d1reana485161v.cloudfront.net/i/logo_tusclases_v3@2x.png" width="100" height="38" alt="Clases particulares" />
+						</a>
+					</div>
+					<!-- End Widget -->
+					<!-- Tusclasesparticulares Booking v.1.0.1. Copy this code and paste in your HTML -->
+					<script>
+						(function (i, s, o, g, a, m){
+							a = s.createElement(o);
+							m = s.getElementsByTagName(o)[0];
+							a.async = 1;
+							a.src = g;
+							m.parentNode.insertBefore(a, m);
+						}(window, document, 'script', 'https://d1reana485161v.cloudfront.net/widget-client_jq.min.js?v=1745'));
+					</script>
+					<div
                     id="my_client_widget"
                     data-centro="olga-barcelona-capital"
                     data-domain="https://www.tusclasesparticulares.com"
                     data-cdn="https://d1reana485161v.cloudfront.net/"
                     data-css-version="1947"
                     class="align-content-center"
-            >
-                <a href="https://www.tusclasesparticulares.com/academia/olga-barcelona-capital.aspx" target="_blank">
-                    <img src="https://d1reana485161v.cloudfront.net/i/logo_tusclases_v3@2x.png" width="100" height="38" alt="Clases particulares" />
-                </a>
-            </div>
-            <!-- End Widget -->
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="container">
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-          </ul>
-          <div class="justify-content-center d-flex">
-            <a href="/" class=" text-body-secondary  lh-1">
-              <svg class="bi" width="30" height="24">
-                <use xlink:href="#letstalk-esp"></use>
-              </svg>
-            </a>
-            <span>&nbsp;&nbsp;</span>
-            <p class="text-center text-body-secondary">
-                <span>&copy;&nbsp;</span>
-                <span>
-                  <script type="text/javascript">
-                    document.write(new Date().getFullYear().toString());
-                  </script>
-                </span>
-                <span>&nbsp;Let's Talk!</span>
-            </p>
-          </div>
-        </footer>
-      </div>
-    </main>
-    <script src="src/js/bootstrap.bundle.min.js"></script>
-  </body>
+					>
+						<a href="https://www.tusclasesparticulares.com/academia/olga-barcelona-capital.aspx" target="_blank">
+							<img src="https://d1reana485161v.cloudfront.net/i/logo_tusclases_v3@2x.png" width="100" height="38" alt="Clases particulares" />
+						</a>
+					</div>
+					<!-- End Widget -->
+				</div>
+			</div>
+			
+			<!-- Footer -->
+			<div class="container">
+				<footer class="py-3 my-4">
+					<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+						<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+						<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+						<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+						<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+						<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+					</ul>
+					<div class="justify-content-center d-flex">
+						<a href="/" class=" text-body-secondary  lh-1">
+							<svg class="bi" width="30" height="24">
+								<use xlink:href="#letstalk-esp"></use>
+							</svg>
+						</a>
+						<span>&nbsp;&nbsp;</span>
+						<p class="text-center text-body-secondary">
+							<span>&copy;&nbsp;</span>
+							<span>
+								<script type="text/javascript">
+									document.write(new Date().getFullYear().toString());
+								</script>
+							</span>
+							<span>&nbsp;Let's Talk!</span>
+						</p>
+					</div>
+				</footer>
+			</div>
+		</main>
+		<script src="src/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>
