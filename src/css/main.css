@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+/** Fonts **/
+h1, h2, h3, h4, h5, h6 {
+    font-family: Geist, sans-serif;
+    font-weight: bold;
+}
+body, p, span, a {
+    font-family: Urbanist, sans-serif;
+}
+
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -7,7 +17,6 @@
     -moz-user-select: none;
     user-select: none;
 }
-
 
 .bi {
     vertical-align: -.125em;

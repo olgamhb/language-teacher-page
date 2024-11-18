@@ -1,6 +1,3 @@
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
@@ -29,23 +26,13 @@ svg.gold {
 }
 
 /* Reviews */
-h2.title-review,
 p.body-review {
   font-size: clamp(var(--minimum), var(--value), var(--maximum)) !important;
-}
-
-h2.title-review {
-  --minimum: 1.75em;
-  --value: 5vw;
-  --maximum: 2.5em;
-  font-family: Urbanist, sans-serif;
-  font-weight: bold;
 }
 p.body-review {
   --minimum: 1em;
   --value: 2.5vw;
-  --maximum: 1.4em;
-  font-family: Urbanist, sans-serif;
+  --maximum: 1.2em;
 }
 
 .svg-review-container {
