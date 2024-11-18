@@ -65,6 +65,59 @@ body, p, span, a {
     display: block !important;
 }
 
+/* Contact buttons */
+a.whatsapp {
+    background-color: #25d366;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #25d366;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+a.whatsapp:hover {
+    background-color: #128c7e;
+    color: white;
+    border: 1px solid #128c7e;
+}
+a.whatsapp:focus {
+    background-color: #075e54;
+    color: white;
+    border: 1px solid #075e54;
+}
+a.email {
+    background-color: #0078d4;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #0078d4;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+a.email:hover {
+    background-color: #034fa0;
+    color: white;
+    border: 1px solid #034fa0;
+}
+a.email:focus {
+    background-color: #0f3464;
+    color: white;
+    border: 1px solid #0f3464;
+}
+a.phone {
+    background-color: #ff9a00;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #ff9a00;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+a.phone:hover {
+    background-color: #ff7400;
+    color: white;
+    border: 1px solid #ff7400;
+}
+a.phone:focus {
+    background-color: #ff4d00;
+    color: white;
+    border: 1px solid #ff4d00;
+}
+
  /* button light/dark mode */
 .button-switch-dark-light-mode {
     background-color: var(--bd-violet-bg) !important;
