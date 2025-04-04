@@ -1,331 +1,633 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="src/css/bootstrap.css" rel="stylesheet"/>
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+<meta charset="utf-8">
+<title>Olga Muñoz</title>
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .btn-bd-primary {
-            --bd-violet-bg: #712cf9;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #6528e0;
-            --bs-btn-hover-border-color: #6528e0;
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #5a23c8;
-            --bs-btn-active-border-color: #5a23c8;
-        }
-
-        .bd-mode-toggle {
-            z-index: 1500;
-        }
-
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important;
-        }
-    </style>
-    <link href="src/css/product.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="src/css/docssearch3.css"/>
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
 </head>
+
 <body>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-        </symbol>
-    </svg>
-
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                id="bd-theme"
-                type="button"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-        </ul>
-    </div>
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-        </symbol>
-        <symbol id="cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-        </symbol>
-        <symbol id="chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-        </symbol>
-    </svg>
-
-    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-        <div class="container">
-            <a class="navbar-brand d-md-none" href="#">
-                <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-                Aperture
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-grow-1 justify-content-between">
-                        <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-                        </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
+<div class="page-wrapper" id="inicio">
+ 	
+    <!-- Main Header -->
+    <header class="main-header header-style-three">
+    
+        <!-- Header Lower -->
+        <div class="header-lower">
+			<div class="lower-inner">
+				<div class="outer-container">
+					<div class="inner-container clearfix">
+						
+						<div class="pull-left logo-box">
+							<div class="logo"><a href="#inicio"><img src="images/logo_esp.svg" alt="Olga Muñoz" width="170"></a></div>
+						</div>
+						
+						
+						<div class="pull-right nav-outer clearfix">
+							<!-- Mobile Navigation Toggler -->
+							<div class="mobile-nav-toggler"><span class="icon flaticon-menu-2"></span></div>
+							<!-- Main Menu -->
+							<nav class="main-menu show navbar-expand-md">
+								<div class="navbar-header">
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								
+								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+									<ul class="navigation clearfix">
+										<li><a href="#sobremi">Sobre mí</a></li>
+										<li><a href="#cursos">Cursos</a></li>
+										<li><a href="#comofunciona">Cómo funciona</a></li>
+										<li><a href="#opiniones">Opiniones</a></li>
+										<li><a href="#contacto">Contacto</a></li>
+										<li class="dropdown"><a href="javascript:">ES</a>
+											<ul>
+												<li><a href="index.html">ES</a></li>
+												<li><a href="index-ca.html">CA</a></li>
+												<li><a href="index-en.html">EN</a></li>
+											</ul>
+										</li>
+										
+									 </ul>
+								</div>
+							</nav>
+							<!-- Main Menu End-->
+							
+							
+								<!-- Login Box -->
+								<ul class="login-box">
+									<li><a href="tel:+34635228650" class="register" target="_blank">+34 635 22 86 50</a></li>
+								</ul>
+								
+								
+							</div>
+						
+						
+					</div>
+				</div>
+			</div>
         </div>
-    </nav>
-
-    <main>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-            <div class="col-md-6 p-lg-5 mx-auto my-5">
-                <h1 class="display-3 fw-bold">Designed for engineers</h1>
-                <h3 class="fw-normal text-muted mb-3">Build anything you want with Aperture</h3>
-                <div class="d-flex gap-3 justify-content-center lead fw-normal">
-                    <a class="icon-link" href="#">
-                        Learn more
-                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                    <a class="icon-link" href="#">
-                        Buy
-                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="product-device shadow-sm d-none d-md-block"></div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        <!--End Header Upper-->
+        
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="#inicio"><img src="images/logo_esp.svg" width="100" alt="Olga Muñoz"></a></div>
+                <div class="menu-outer">
+					<!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+				</div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+    
+    </header>
+    <!-- End Main Header -->
+	
+    <!-- Banner Slider Three -->
+    <section class="banner-section-four">
+		<div class="icon-layer-one" style="background-image:url(images2/icons/icon-11.png)"></div>
+		<div class="icon-layer-two" style="background-image:url(images2/icons/icon-3.png)"></div>
+		<div class="icon-layer-three" style="background-image:url(images2/background/pattern-8.png)"></div>
+		<div class="icon-layer-eight" style="background-image:url(images2/background/pattern-9.png)"></div>
+    	<div class="auto-container">
+            <div class="row clearfix">
+				
+				<!-- Content Column -->
+				<div class="content-column col-lg-6 cl-md-12 col-sm-12">
+					<div class="inner-column">
+						<h1>Olga Muñoz,<br>clases de español y catalán</h1>
+						<div class="text">¡Hola! Soy Olga Muñoz, y juntos hablaremos como nativos.<br><br>
+Soy Olga Muñoz, especialista en la enseñanza de español y catalán a través de la conversación desde 2017. Mis clases están diseñadas para que hables de manera natural y fluida, logrando una pronunciación y comprensión como un nativo. ¡Hablemos y crezcamos juntos en este viaje lingüístico!</div>
+						<a class="theme-btn btn-style-six" href="#comofunciona"><span class="txt">Cómo funciona</span></a>
+						<div class="phone-box">
+							<div class="box-inner">
+								<span class="icon flaticon-phone-call"></span>
+								Llámame
+								<a href="tel:+34635228650" target="_blank">+34 635 22 86 50</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Image Column -->
+				<div class="image-column col-lg-6 cl-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="color-layer"></div>
+						<div class="icon-layer-four" style="background-image:url(images2/background/pattern-7.png)"></div>
+						<div class="icon-layer-five" style="background-image:url(images2/icons/icon-12.png)"></div>
+						<div class="icon-layer-six" style="background-image:url(images2/icons/icon-3.png)"></div>
+						<div class="icon-layer-seven" style="background-image:url(images2/icons/icon-12.png)"></div>
+						<div class="image">
+							<img src="images/olga.png" alt="Olga Muñoz" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
         </div>
+    </section>
+    <!-- End Banner Slider Three -->
+	
+	<!-- Featured Section -->
+	<section class="featured-section">
+		<div class="auto-container">
+			<div class="row clearfix">
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp">
+						<div class="icon-box">
+							<span class="icon flaticon-languages"></span>
+						</div>
+						<h6>Español y catalán</h6>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp">
+						<div class="icon-box">
+							<span class="icon flaticon-team-1"></span>
+						</div>
+						<h6>Clases individuales o en grupo</h6>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp">
+						<div class="icon-box">
+							<span class="icon flaticon-mortarboard"></span>
+						</div>
+						<h6>Presencial y en línea</h6>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp">
+						<div class="icon-box">
+							<span class="icon flaticon-check-2"></span>
+						</div>
+						<h6>Primera clase gratuita</h6>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Featured Section -->
 
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-            <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 py-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-        </div>
 
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-            <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 py-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-        </div>
+	<!-- Case Study Section -->
+	<section class="case-study-section" id="sobremi">
+		<div class="section-curve-layer" style="background-image:url(images2/background/case-curve.png)"></div>
+		<div class="icon-layer-one" style="background-image:url(images2/icons/icon-6.png)"></div>
+		<div class="icon-layer-two" style="background-image:url(images2/icons/pattern-11.png)"></div>
+		<div class="icon-layer-five" style="background-image:url(images2/icons/icon-3.png)"></div>
+		<div class="auto-container">
+			<div class="row clearfix">
+				
+				<!-- Content Column -->
+				<div class="content-column col-lg-7 col-md-12 col-sm-12">
+					<div class="inner-column">
+						
+						<h3>Sobre mí</h3>
+						<div class="text">
+							<p>¡Hola! Soy Olga Muñoz, profesora de catalán y castellano con más de 8 años de experiencia en la enseñanza de estos idiomas. Me apasiona compartir mis conocimientos lingüísticos y culturales con mis estudiantes, ayudándolos a desenvolverse con confianza en ambos idiomas.<br><br>
+							En mis clases, utilizo métodos interactivos y adaptados a las necesidades individuales de cada alumno. Creo en la importancia de la inmersión total y la práctica constante, por lo que mis lecciones son dinámicas, centradas en la comunicación real y apoyadas por materiales auténticos que permiten a los estudiantes conocer de cerca la cultura catalana y española. Estoy aquí para ayudarte a alcanzar tus objetivos lingüísticos y a disfrutar del proceso de aprendizaje, así que encantada de conocerte y ¿a qué esperas a mejorar tu dominio del catalán y del castellano?</p>
+						</div>
+						<a href="#contacto" class="theme-btn btn-style-seven"><span class="txt">Quiero mejorarlo</span></a>
+					</div>
+				</div>
+				
+				<!-- Image Column -->
+				<div class="image-column col-lg-5 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="icon-layer-three" style="background-image:url(images2/icons/icon-12.png)"></div>
+						<div class="icon-layer-four" style="background-image:url(images2/icons/icon-3.png)"></div>
+						<div class="icon-layer-six" style="background-image:url(images2/icons/icon-2.png)"></div>
+						<div class="image titlt" data-tilt data-tilt-max="4">
+							<img src="images/olga2.jpg" alt="Olga Muñoz" class="imagenradio  wow fadeInRight" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Case Study Section -->
+	
+	
+	
+	
+	
+	<!-- Relationship Section -->
+	<section class="relationship-section" id="cursos">
+		<div class="auto-container">
+			<div class="row clearfix">
+			
+				<!-- Blocks Column -->
+				<div class="blocks-column col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="pattern-layer" style="background-image:url(images2/background/pattern-11.png)"></div>
+						<div class="row clearfix">
+							
+							<!-- Feature Block Four -->
+							<div class="feature-block-four col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+									
+									<div class="icon-box">
+										<span class="icon flaticon-clock"></span>
+									</div>
+									<h5>Duración: 1 hora</h5>
+								</div>
+							</div>
+							
+							<!-- Feature Block Four -->
+							<div class="feature-block-four col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
+									
+									<div class="icon-box">
+										<span class="icon flaticon-teaching"></span>
+									</div>
+									<h5>Clases en línea o presenciales</h5>
+								</div>
+							</div>
+							
+							<!-- Feature Block Four -->
+							<div class="feature-block-four col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+									
+									<div class="icon-box">
+										<span class="icon flaticon-software"></span>
+									</div>
+									<h5>Clases multiplataforma</h5>
+								</div>
+							</div>
+							
+							<!-- Feature Block Four -->
+							<div class="feature-block-four col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
+									
+									<div class="icon-box">
+										<span class="icon flaticon-check-2"></span>
+									</div>
+									<h5>Desde 20€/clase</h5>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Content Column -->
+				<div class="content-column col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="color-box"></div>
+						<div class="icon-layer-one" style="background-image:url(images2/icons/icon-12.png)"></div>
+						<h2>Clases individuales, para parejas y grupos</h2>
+						<div class="bold-text">1 clase a la semana: 25€/h.<br>2 clases o más a la semana: 20€/h.</div>
+						<div class="text">Las clases en línea pueden ser en las siguientes plataformas: Skype, WhatsApp, FaceTime, Google Meet<br><br>En el caso de parejas o grupos, las clases siempre serán en línea y el precio de la clase es de 20€.</div>
+						<a href="#contacto" class="theme-btn btn-style-seven botondestacado"><span class="txt">Siempre ofrezco una clase de prueba de 30 minutos gratis, sin compromiso. Así que, ¿a qué estás esperando? Contáctame y agendamos la primera clase de prueba, ya verás como aprendes más rápido de lo esperado.</span></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Relationship Section -->
+	
+	
+	
+	<!-- Connection Section -->
+	<section class="connection-section" id="comofunciona">
+		<div class="color-one"></div>
+		<div class="pattern-layer" style="background-image:url(images2/background/pattern-10.png)"></div>
+		<div class="icon-layer-one" style="background-image:url(images2/icons/icon-4.png)"></div>
+		<div class="icon-layer-two" style="background-image:url(images2/icons/icon-15.png)"></div>
+		<div class="icon-layer-three" style="background-image:url(images2/icons/icon-4.png)"></div>
+		<div class="icon-layer-four" style="background-image:url(images2/icons/pattern-10.png)"></div>
+		<div class="icon-layer-five" style="background-image:url(images2/icons/icon-3.png)"></div>
+		
+		<div class="auto-container">
+			<div class="row clearfix">
+			
+				<!-- Content Column -->
+				<div class="content-column col-lg-8 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="sec-title">
+							<h2>Cómo funciona</h2>
+							<div class="text">Mi objetivo principal es que mis estudiantes alcancen un alto nivel de fluidez en los idiomas que enseño: español y catalán. Por esta razón, mis clases se centran prioritariamente en la conversación. Durante las sesiones, mantenemos charlas animadas y dinámicas en las que corrijo errores de forma continua, consolidando unas sólidas bases del idioma a través de la repetición. Paralelamente, integramos la gramática y el vocabulario de manera gradual para mejorar el dominio lingüístico.</div>
+						</div>
+						<div class="row clearfix">
+							
+							<!-- Feature Block Three -->
+							<div class="feature-block-three col-xl-6 col-lg-12 col-md-12 col-sm-12">
+								<div class="inner-box">
+									<div class="icon-box">
+										
+										<span class="icon flaticon-mortarboard"></span>
+									</div>
+									<h4>Tareas adicionales</h4>
+									<div class="text">Comprendo que cada estudiante tiene su propia agenda con prioridades y responsabilidades, por lo que no impongo deberes. No obstante, si te gustaría recibir tareas adicionales, solo tienes que decírmelo y las prepararé para ti.</div>
+									
+								</div>
+							</div>
+							
+							<!-- Feature Block Three -->
+							<div class="feature-block-three col-xl-6 col-lg-12 col-md-12 col-sm-12">
+								<div class="inner-outer">
+									<div class="inner-box">
+										<div class="icon-box">
+											
+											<span class="icon flaticon-bar-chart"></span>
+										</div>
+										<h4>Progreso semanal</h4>
+										<div class="text">Además, ofrezco la posibilidad de corregir una redacción semanal de cualquier temática para aquellos alumnos interesados en mejorar sus habilidades de escritura. Así, podrás practicar y observar tu progreso a lo largo del tiempo.</div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<!-- Feature Block Three -->
+							<div class="feature-block-three col-xl-12 col-lg-12 col-md-12 col-sm-12">
+								<div class="inner-box">
+									<div class="icon-box">
+										<span class="icon flaticon-bullhorn"></span>
+									</div>
+									<h4>Primera clase gratuita</h4>
+									<div class="text">Para las primeras clases, yo proporcionaré el material necesario. Cualquier otra duda que tengas, puedes plantearla en nuestra primera clase gratuita de 30 minutos o, si lo prefieres, contactarme de manera privada.</div>
+									
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- Video Column -->
+				<div class="video-column col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="color-two"></div>
+						<!-- Video Box -->
+						<div class="video-boxed-two wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<figure class="video-image">
+								<img src="images/oficina.jpg" alt="Mi oficina">
+							</figure>
+							
+						</div>
+						<div class="text-center mt-5">
+							<a href="#contacto" target="_blank" class="theme-btn btn-style-six"><span class="txt">¡Me interesa!</span></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Connection Section -->
+	
+	
+	
+	<!-- Testimonial Section Three -->
+	<section class="testimonial-section-three" id="opiniones">
+		<div class="color-layer"></div>
+		<div class="icon-layer-one" style="background-image:url(images2/icons/icon-6.png)"></div>
+		<div class="icon-layer-two" style="background-image:url(images2/icons/icon-7.png)"></div>
+		<div class="icon-layer-three" style="background-image:url(images2/icons/icon-3.png)"></div>
+		<div class="icon-layer-four" style="background-image:url(images2/icons/pattern-4.png)"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="section-color-layer"></div>
+				<div class="title">Testimoniales</div>
+				<h2>Valoraciones de nuestras clases</h2>
+			</div>
+			<div class="testimonial-carousel-three owl-carousel owl-theme">
+				
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Emma</h6>
+						<div class="designation">Recomendaciones de clases de castellano</div>
+						<div class="text">Estoy haciendo clases de castellano con Olga desde hace casi dos meses y estoy muy contenta. Hablo con más fluidez y tengo mucha más confianza en mí, entonces ahora hablar en castellano no me da tanto miedo como antes. Olga es muy maja y siempre me hace sentir cómoda. Hablamos de todos tipos de temas y siempre es interesante y divertido. Recomiendo a Olga a todos los que quieren mejorar su castellano de una forma relajada, divertida y natural.</div>
+					</div>
+				</div>
+				
+				
+				
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Tine</h6>
+						<div class="designation">Recomendaciones de clases de castellano</div>
+						<div class="text">Me encantan las clases de Olga!! Para mi no solo son clases de castellano sino también clases de reflexión y discusión. Con Olga puedes hablar de todo. Siempre en un ambiente relajado y con mucha confianza. Olga es una auténtica profesional, siempre está muy atenta y siempre hace lo posible para dar el mejor servicio. No dudes más, si quieres una profesora de conversación ya la has encontrado!!:)</div>
+					</div>
+				</div>
 
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 py-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-        </div>
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Lidia B.</h6>
+						<div class="designation">Recomendaciones de clases de castellano</div>
+						<div class="text">Olga es una profesora genial, sabe como conectar conmigo y adapta las clases a mis intereses. Sus clases me ayudan a ganar confianza para hablar Castellano. Además ella es muy amable y tiene una personalidad muy buena. Recomiendo sus clases.</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Esther</h6>
+						<div class="designation">Recomendaciones de clases de catalán</div>
+						<div class="text">Excelente profesora de catalán, muy profesional, clases muy amenas. Te acompaña a conseguir tu objetivo. Muy recomendable.</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Giovanni</h6>
+						<div class="designation">Recomendaciones de clases de catalán</div>
+						<div class="text">Ha sido un placer aprender catalán con Olga durante varias semanas. Hace las lecciones fáciles, simples y muy prácticas. Muy recomendable y demasiados agradecidos por haberla tenido.</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block Three -->
+				<div class="testimonial-block-three">
+					<div class="inner-box">
+						<div class="image-outer">
+							<div class="image">
+								
+							</div>
+							<div class="quote flaticon-left-quote"></div>
+						</div>
+						<h6>Irati</h6>
+						<div class="designation">Recomendaciones de clases de catalán</div>
+						<div class="text">Mi experiencia con Olga está siendo muy buena. Acudo a clases dos días a la semana y he mejorado mucho mi nivel de Catalán, tanto en comprender cómo en hablar. Ella como profesora es muy agradable, te hace sentir cómoda en todo momento, te anima a hablar y realiza todo tipo de correcciones. Además, imparte materia de manera entretenida y muy formativa.</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Testimonial Section Three -->
+	
+	
+	
+	
+	
+	<!-- Footer Style Two -->
+    <footer class="footer-style-two" id="contacto">
+		<div class="pattern-layer-four" style="background-image: url(images2/icons/icon-10.png)"></div>
+		<div class="pattern-layer-five" style="background-image: url(images2/icons/icon-4.png)"></div>
+		<div class="pattern-layer-six" style="background-image: url(images2/icons/icon-16.png)"></div>
+		<div class="pattern-layer-seven" style="background-image: url(images2/icons/icon-6.png)"></div>
+    	<div class="auto-container">
+			<!-- Upper Box -->
+			<div class="upper-box">
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="logo">
+							<a href="#inicio"><img src="images/logo_esp.svg" alt="Olga Muñoz" width="100" /></a>
+						</div>
+						<div class="phone">
+							<strong>Llámanos</strong>
+							<a href="tel:+34934281964" target="_blank">+34 93 428 1964</a>
+						</div>
+						<div class="email">
+							<strong>Escríbenos</strong>
+							<a href="mailto:olgamhb@hotmail.es" target="_blank">olgamhb@hotmail.es</a>
+						</div>
+						<div class="phone">
+							<strong>WhatsApp</strong>
+							<a href="https://wa.me/34635228650" target="_blank">+34 635 22 86 50</a>
+						</div>
+						
+					</div>
+					<div class="pull-right">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="https://www.tusclasesparticulares.com/academia/olga-barcelona-capital.aspx" target="_blank"><img src="images/tusclasesparticulares.svg" width="100"/></a></li>
+							<li><a href="https://g.co/kgs/W9FqR7S" target="_blank" class="fa fa-google-plus"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- End Upper Box -->
+			
+        	<!-- Widgets Section -->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!-- Column -->
+                    <div class="big-column col-lg-12 col-md-12 col-sm-12">
+						<div class="row clearfix">
+						
+                        	<!-- Footer Column -->
+                            <div class="footer-column col-lg-12 col-md-12 col-sm-12">
+                                <div class="footer-widget payment-widget">
+									<div class="text text-center">
+										Para las clases presenciales mi domicilio es en la siguiente dirección:<br>
+										<b>Calle Sant Antoni Maria Claret número 28, Bajos 1ª - 08037 - Barcelona</b><br><br>
+										
+										<a href="https://maps.app.goo.gl/SJisW2aKV4rHQ2ge8" target="_blank" class="theme-btn btn-style-six"><div class="txt">Ver en Google Maps</div></a>
+										
+									</div>
+									
+								</div>
+							</div>
+							
+							
+							
+						</div>
+					</div>
+					
+					
+				
+				</div>
+			</div>
+			
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<div class="copyright">Copyright Let´s Talk. Todos los derechos reservados</div>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- End Footer Style Two -->
+	
+</div>
+<!--End pagewrapper-->
 
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="my-3 py-3">
-                    <h2 class="display-5">Another headline</h2>
-                    <p class="lead">And an even wittier subheading.</p>
-                </div>
-                <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-            </div>
-        </div>
-    </main>
 
-    <footer class="container py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-                <small class="d-block mb-3 text-body-secondary">&copy; 2017–2024</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 
-    <script src="src/js/bootstrap.js"></script>
-    <script src="src/js/bootstrap.bundle.min.js" ></script>
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/nav-tool.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
