@@ -81,6 +81,7 @@
        url("../fonts/Muli.svg#Muli") format("svg");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -92,6 +93,7 @@
        url("../fonts/Muli-SemiBold.svg#Muli") format("svg");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -102,6 +104,7 @@
          url('../fonts/Roman-Morrissey.woff') format('woff'),
          url('../fonts/Roman-Morrissey.ttf')  format('truetype'),
          url('../fonts/Roman-Morrissey.svg#Roman Morrissey DEMO') format('svg');
+    font-display: swap;
 }
 
 /*** 
@@ -13003,7 +13006,7 @@ img{
 	font-size:30px;
 }
 
-.testimonial-block-three .inner-box h6{
+.testimonial-block-three .inner-box h6,.testimonial-block-three .inner-box h5{
 	color:#0c0d24;
 	font-weight:500;
 }
