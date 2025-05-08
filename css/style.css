@@ -15453,7 +15453,10 @@ img{
 	width:305px;
 	height:17px;
 	z-index:-1;
-	background:url(../images/main-slider/line.png);
+	background-image: image-set(
+			url("../images/main-slider/line.webp") type("image/webp"),
+			url("../images/main-slider/line.png") type("image/png")
+	);
 	background-repeat:no-repeat;
 }
 
