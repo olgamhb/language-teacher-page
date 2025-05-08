@@ -1,0 +1,38 @@
+/** Background **/
+.img-background-case-curve {
+    background-image: image-set(
+        url("../images/background/case-curve.webp") type("image/webp"),
+        url("../images/background/case-curve.png") type("image/png")
+    );
+}
+.img-background-pattern-01 {
+    background-image: image-set(
+            url("../images/background/pattern-01.webp") type("image/webp"),
+            url("../images/background/pattern-01.png") type("image/png")
+    );
+}
+.img-background-pattern-02 {
+    background-image: image-set(
+            url("../images/background/pattern-02.webp") type("image/webp"),
+            url("../images/background/pattern-02.png") type("image/png")
+    );
+}
+.img-background-pattern-03 {
+    background-image: image-set(
+            url("../images/background/pattern-03.webp") type("image/webp"),
+            url("../images/background/pattern-03.png") type("image/png")
+    );
+}
+.img-background-pattern-04 {
+    background-image: image-set(
+            url("../images/background/pattern-04.webp") type("image/webp"),
+            url("../images/background/pattern-04.png") type("image/png")
+    );
+}
+.img-background-pattern-05 {
+    background-image: image-set(
+            url("../images/background/pattern-05.webp") type("image/webp"),
+            url("../images/background/pattern-05.png") type("image/png")
+    );
+}
+
