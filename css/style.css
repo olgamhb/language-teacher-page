@@ -83,29 +83,6 @@
 	font-display: swap;
 }
 
-@font-face {
-  font-family: 'Conv_Muli-SemiBold';
-  src: url("../fonts/Muli-SemiBold.eot");
-  src: url("../fonts/Muli-SemiBold.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Muli-SemiBold.woff") format("woff"),
-       url("../fonts/Muli-SemiBold.ttf") format("truetype"),
-       url("../fonts/Muli-SemiBold.svg#Muli") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roman Morrissey DEMO';
-    src: url('../fonts/Roman-Morrissey.eot');
-    src: url('../fonts/Roman-Morrissey.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roman-Morrissey.woff2') format('woff2'),
-         url('../fonts/Roman-Morrissey.woff') format('woff'),
-         url('../fonts/Roman-Morrissey.ttf')  format('truetype'),
-         url('../fonts/Roman-Morrissey.svg#Roman Morrissey DEMO') format('svg');
-    font-display: swap;
-}
-
 /*** 
 
 ====================================================================
