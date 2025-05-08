@@ -11140,7 +11140,7 @@ img{
 	color:#0c0d24;
 	opacity:0.90;
 	margin-top:25px;
-	font-family: 'Conv_Muli';
+	font-family: 'Conv_Muli', sans-serif;
 }
 
 .feature-block:nth-child(2) .inner-box{
@@ -16371,37 +16371,30 @@ img{
 	}
 }
 
-.boton-destacado
-{
+.boton-destacado {
 	display:block;
 	padding:20px;
 	text-align:center;
 	text-transform:none;
 }
 
-.imagenradio
-{
+.img-radio {
 	border-radius:50px;
 }
 
-body 
-{
+body {
 	overflow-x:hidden;
 }
 
-@media only screen and (max-width: 767px)
-{
-	.footer-style-two .upper-box .logo
-	{
+@media only screen and (max-width: 767px) {
+	.footer-style-two .upper-box .logo {
 		float:none;
 	}
-	.footer-style-two .upper-box .phone
-	{
+	.footer-style-two .upper-box .phone {
 		margin-left:0;
 		margin-right:15px;
 	}
-	.footer-style-two .upper-box .email
-	{
+	.footer-style-two .upper-box .email {
 		margin-left:0;
 		margin-right:15px;
 	}
