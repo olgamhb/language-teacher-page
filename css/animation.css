@@ -121,29 +121,6 @@
   
 }
 
-.empty-animation{
-    animation-name: slideInUp; 
-    animation-duration: 2s; 
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  
-  -webkit-animation-name: slideInUp; 
-    -webkit-animation-duration: 2s; 
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-  
-  -moz-animation-name: slideInUp; 
-    -moz-animation-duration: 2s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: linear;
-  
-  -ms-animation-name: slideInUp; 
-    -ms-animation-duration: 2s; 
-    -ms-animation-iteration-count: 1;
-    -ms-animation-timing-function: linear;
-  
-}
-
 @-webkit-keyframes rotateme {
     0% {
         -webkit-transform: rotate(0deg);
@@ -174,6 +151,7 @@
         opacity: 1;
       }
 }
+
 @-o-keyframes rotateme {
     0% {
         -o-transform: rotate(0deg);
@@ -191,7 +169,6 @@
 }
 
 @keyframes rotateme {
-    
      0% {
         transform: rotate(0deg);
         opacity: 1;
