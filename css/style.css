@@ -54,7 +54,6 @@
 @import url('flaticon.css');
 @import url('animate.css');
 @import url('owl.css');
-@import url('animation.css');
 @import url('custom-animate.css');
 
 /*** 
@@ -5059,8 +5058,8 @@ img{
 	transition:all 300ms ease;
 }
 
-.default-form .form-group input::-webkit-input-placeholder,
-.default-form .form-group textarea::-webkit-input-placeholder{
+.default-form .form-group input::placeholder,
+.default-form .form-group textarea::placeholder{
 	color:#777777;
 }
 
@@ -16429,4 +16428,8 @@ body
 		margin-left:0;
 		margin-right:15px;
 	}
+}
+
+.img-vertical-align {
+	vertical-align: middle;
 }

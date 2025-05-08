@@ -38,17 +38,32 @@
 @keyframes rotate-me {
      0% {
         transform: rotate(0deg);
-        opacity: 1;
       }
     50% {
         transform: rotate(180deg);
       }
     100% {
         transform: rotate(360deg);
-        opacity: 1;
       }
 }
 
+.news-section .icon-layer-two,
+.news-section .icon-layer-three,
+.main-footer .pattern-layer-two,
+.main-footer .pattern-layer-four,
+.user-profile-section .pattern-layer-one,
+.user-profile-section .pattern-layer-two,
+.user-profile-section .pattern-layer-three,
+.blog-page-section .pattern-layer-two,
+.blog-page-section .pattern-layer-one,
+.contact-banner-section .pattern-layer-two,
+.banner-section-four .icon-layer-two,
+.connection-section .icon-layer-one,
+.connection-section .icon-layer-three,
+.contact-banner-section .pattern-layer-three,
+.banner-section-three .image-column .icon-layer-five,
+.banner-section-two .content-column .icon-layer-two,
+.banner-section .image-column .pattern-layer-two,
 .footer-style-three .icon-layer-one,
 .admission-section .pattern-layer-one,
 .testimonial-section-five .pattern-layer-one,
@@ -58,26 +73,55 @@
 .mission-section .pattern-layer-three,
 .banner-section-five .icon-layer-four,
 .about-section .pattern-layer-two{
-    animation-name: rotateme; 
-    animation-duration: 15s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: rotate-me 15s linear infinite;
+}
+
+.banner-section-two .content-column .icon-layer-four,
+.banner-section .image-column .pattern-layer-four,
+.banner-section-three .content-column .icon-layer-two,
+.banner-section-three .image-column .icon-layer-four,
+.banner-section-three .image-column .icon-layer-three,
+.banner-section-three .content-column .icon-layer,
+.page-title-section .icon-layer-two,
+.page-title-section .icon-layer-one,
+.page-title-section .icon-layer-three,
+.blog-page-section .pattern-layer-three,
+.blog-detail-banner-section .pattern-layer-two,
+.blog-detail-banner-section .pattern-layer-one,
+.contact-page-section .form-column .pattern-layer-one,
+.contact-page-section .form-column .pattern-layer-two,
+.banner-section-two .content-column .icon-layer-five,
+.contact-banner-section .pattern-layer-one,
+.testimonial-section-three .icon-layer-two,
+.testimonial-section-three .icon-layer-four,
+.trial-section .icon-layer-two,
+.case-study-section .icon-layer-five,
+.case-study-section .icon-layer-four,
+.news-section-two .icon-layer-one,
+.goal-section .content-column .inner-column .pattern-layer-three{
+    animation: rotate-me 24s linear infinite;
 }
 
 /* Bob Up Down*/
 @keyframes float-up-down {
   0%, 100% {
     transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 1;
+      opacity: 1;
   }
   50% {
     transform: translateY(30px);
-    transform: translateY(30px);
-    opacity: 1;
+      opacity: 1;
   }
 }
 
+.banner-section .pattern-layer-eight,
+.banner-section-two .pattern-layer-two,
+.banner-section-three .pattern-layer-two,
+.banner-section-four .icon-layer-four,
+.banner-section-four .icon-layer-three,
+.footer-style-two .pattern-layer-seven,
+.banner-section .image-column .pattern-layer-five,
+.feature-section .image-column .feature-icon,
 .footer-style-three .icon-layer-three,
 .courses-section-four .pattern-layer-two,
 .study-section .pattern-layer-one,
@@ -89,10 +133,7 @@
 .study-section .image-column .hotline,
 .testimonial-section-five .pattern-layer-four,
 .program-section .pattern-layer-four{
-    animation-name: float_up_down; 
-    animation-duration: 5s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: float-up-down 5s linear infinite;
 }
 
 /* Bob */
@@ -107,11 +148,13 @@
   }
 }
 
+.page-title-section .icon-layer-five,
+.page-title-section .icon-layer-four,
+.banner-section-two .content-column .icon-layer-one,
+.professional-section .images-column .inner-column .pattern-layer,
+.benefit-section .images-column .inner-column .pattern-layer,
 .feature-section-three .pattern-layer-two{
-    animation-name: float-left-right;
-    animation-duration: 30s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: float-left-right 30s linear infinite;
 }
 
 @keyframes float-left-right-two {
@@ -125,13 +168,36 @@
   }
 }
 
+.blog-detail-banner-section .pattern-layer-four,
+.banner-section .image-column .pattern-layer-three,
+.banner-section-two .content-column .icon-layer-three,
+.professional-section .images-column .inner-column .pattern-layer-two,
+.benefit-section .images-column .inner-column .pattern-layer-two,
 .courses-section-four .pattern-layer-one,
 .program-section .pattern-layer-five{
-    animation-name: float-left-right-two;
-    animation-duration: 5s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: float-left-right-two 5s linear infinite;
 }
+
+@keyframes float-bob {
+    0%, 100% {
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+.banner-section .pattern-layer-seven,
+.connection-section .icon-layer-two,
+.case-study-section .icon-layer-one,
+.testimonial-section-three .icon-layer-one,
+.footer-style-two .pattern-layer-six,
+.banner-section-three .content-column .pattern-layer-one,
+.banner-section-two .content-column .pattern-layer-one,
+.goal-section .images-column .pattern-layer{
+    animation: float-bob 7s linear infinite;
+}
+
+/***    Zoom Fade Css    ***/
 
 @keyframes zoom-fade {
   0%, 100% {
@@ -141,12 +207,18 @@
     transform: scale(1);
   }
 }
-
-.admission-section .color-circle,
-.feature-section-three .pattern-layer-four,
-.program-section .pattern-layer-three{
-    animation-name: zoom-fade; 
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+.banner-section-four .icon-layer-six,
+.banner-section .image-column .pattern-layer-one,
+.blog-detail-banner-section .pattern-layer-three,
+.news-section .icon-layer-one{
+    animation: zoom-fade 3s linear infinite;
+}
+.banner-section .pattern-layer-six,
+.case-study-section .icon-layer-six,
+.banner-section-two .pattern-layer-three,
+.footer-style-two .pattern-layer-four,
+.contact-section .info-column .icon-layer,
+.testimonial-section-three .icon-layer-three,
+.connection-section .icon-layer-five {
+    animation: zoom-fade 5s linear infinite;
 }
