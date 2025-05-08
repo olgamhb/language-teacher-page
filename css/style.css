@@ -334,7 +334,11 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-one.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-one.webp") type("image/webp"),
+			url("../images/icons/button-icon-one.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-one .txt:after{
@@ -344,7 +348,11 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-two.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-two.webp") type("image/webp"),
+			url("../images/icons/button-icon-two.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-one:hover::before{
@@ -401,7 +409,11 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-one.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-one.webp") type("image/webp"),
+			url("../images/icons/button-icon-one.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-two .txt:after{
@@ -411,7 +423,11 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-two.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-two.webp") type("image/webp"),
+			url("../images/icons/button-icon-two.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-two:hover::before{
@@ -493,7 +509,11 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-three.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-three.webp") type("image/webp"),
+			url("../images/icons/button-icon-three.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-four .txt:after{
@@ -503,12 +523,20 @@ img{
 	top:10px;
 	width:21px;
 	height:4px;
-	background:url(../images/icons/button-icon-three.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-three.webp") type("image/webp"),
+			url("../images/icons/button-icon-three.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-four:hover .txt:before,
 .btn-style-four:hover .txt:after{
-	background:url(../images/icons/button-icon-two.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/button-icon-two.webp") type("image/webp"),
+			url("../images/icons/button-icon-two.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-four:hover::before{
@@ -7837,7 +7865,11 @@ img{
 	top:5px;
 	width:23px;
 	height:23px;
-	background:url(../images/icons/check.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/check.webp") type("image/webp"),
+			url("../images/icons/check.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .course-detail-section .content-column .learn-box .learn-list li:last-child{
@@ -7865,7 +7897,11 @@ img{
 	top:5px;
 	width:23px;
 	height:23px;
-	background:url(../images/icons/check-1.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/check-1.webp") type("image/webp"),
+			url("../images/icons/check-1.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .course-detail-section .content-column .learn-list-two li:last-child{
@@ -8403,7 +8439,11 @@ img{
 	top:2px;
 	width:23px;
 	height:23px;
-	background:url(../images/icons/check-1.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/check-1.webp") type("image/webp"),
+			url("../images/icons/check-1.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .course-detail-section .info-column .btns-box{
@@ -9696,7 +9736,10 @@ img{
 	top:0;
 	width:91px;
 	height:38px;
-	background:url(../images/icons/contact-arrow.png);
+	background-image: image-set(
+			url("../images/icons/contact-arrow.webp") type("image/webp"),
+			url("../images/icons/contact-arrow.png") type("image/png")
+	);
 }
 
 .contact-page-section .form-column .text{
@@ -12986,7 +13029,11 @@ img{
 	font-style:normal;
 	margin-left:15px;
 	display:inline-block;
-	background:url(../images/icons/btn-icon.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/btn-icon.webp") type("image/webp"),
+			url("../images/icons/btn-icon.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-ten .txt{
@@ -13043,7 +13090,11 @@ img{
 	font-style:normal;
 	margin-left:15px;
 	display:inline-block;
-	background:url(../images/icons/btn-icon.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/btn-icon.webp") type("image/webp"),
+			url("../images/icons/btn-icon.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-eleven .txt{
@@ -13100,7 +13151,11 @@ img{
 	font-style:normal;
 	margin-left:15px;
 	display:inline-block;
-	background:url(../images/icons/btn-icon.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/btn-icon.webp") type("image/webp"),
+			url("../images/icons/btn-icon.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .btn-style-twelve:hover{
@@ -15015,7 +15070,11 @@ img{
 	top:5px;
 	width:23px;
 	height:23px;
-	background:url(../images/icons/check.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/check.webp") type("image/webp"),
+			url("../images/icons/check.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .event-detail-section .content-column .learn-box .learn-list li:last-child{
@@ -15043,7 +15102,11 @@ img{
 	top:5px;
 	width:23px;
 	height:23px;
-	background:url(../images/icons/check-1.png) no-repeat;
+	background-image: image-set(
+			url("../images/icons/check-1.webp") type("image/webp"),
+			url("../images/icons/check-1.png") type("image/png")
+	);
+	background-repeat: no-repeat;
 }
 
 .event-detail-section .content-column .learn-list-two li:last-child{
