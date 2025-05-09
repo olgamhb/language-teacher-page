@@ -1184,7 +1184,13 @@ img{
 	top:0;
 	right:0;
 	bottom:0;
-	background: url(../images/icons/menu-bg.png) no-repeat center center;
+	background-image: image-set(
+			url("../images/icons/menu-bg.webp") type("image/webp"),
+			url("../images/icons/menu-bg.png") type("image/png")
+	);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
 }
 
 .main-menu .navigation > li.has-mega-menu > a span{
