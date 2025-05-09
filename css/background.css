@@ -49,3 +49,51 @@
             url("../images/icons/icon-02.png") type("image/png")
     );
 }
+.img-icons-icon-03 {
+    background-image: image-set(
+            url("../images/icons/icon-03.webp") type("image/webp"),
+            url("../images/icons/icon-03.png") type("image/png")
+    );
+}
+.img-icons-icon-04 {
+    background-image: image-set(
+            url("../images/icons/icon-04.webp") type("image/webp"),
+            url("../images/icons/icon-04.png") type("image/png")
+    );
+}
+.img-icons-icon-05 {
+    background-image: image-set(
+            url("../images/icons/icon-05.webp") type("image/webp"),
+            url("../images/icons/icon-05.png") type("image/png")
+    );
+}
+.img-icons-icon-06 {
+    background-image: image-set(
+            url("../images/icons/icon-06.webp") type("image/webp"),
+            url("../images/icons/icon-06.png") type("image/png")
+    );
+}
+.img-icons-icon-07 {
+    background-image: image-set(
+            url("../images/icons/icon-07.webp") type("image/webp"),
+            url("../images/icons/icon-07.png") type("image/png")
+    );
+}
+.img-icons-icon-08 {
+    background-image: image-set(
+            url("../images/icons/icon-08.webp") type("image/webp"),
+            url("../images/icons/icon-08.png") type("image/png")
+    );
+}
+.img-icons-icon-09 {
+    background-image: image-set(
+            url("../images/icons/icon-09.webp") type("image/webp"),
+            url("../images/icons/icon-09.png") type("image/png")
+    );
+}
+.img-icons-icon-10 {
+    background-image: image-set(
+            url("../images/icons/icon-10.webp") type("image/webp"),
+            url("../images/icons/icon-10.png") type("image/png")
+    );
+}
