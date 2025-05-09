@@ -275,7 +275,7 @@
 			nav:true,
 			smartSpeed: 500,
 			autoplay: 4000,
-			navText: [ '<span><img src="images2/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images2/icons/testimonial-right-arrow.png" alt="" /></span>' ],
+			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
 			responsive:{
 				0:{
 					items:1
@@ -307,7 +307,7 @@
 			nav:true,
 			smartSpeed: 500,
 			autoplay: 4000,
-			navText: [ '<span><img src="images2/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images2/icons/testimonial-right-arrow.png" alt="" /></span>' ],
+			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
 			responsive:{
 				0:{
 					items:1
@@ -375,7 +375,7 @@
 			nav:true,
 			smartSpeed: 500,
 			autoplay: 5000,
-			navText: [ '<span><img src="images2/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images2/icons/testimonial-right-arrow.png" alt="" /></span>' ],
+			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
 			responsive:{
 				0:{
 					items:1
