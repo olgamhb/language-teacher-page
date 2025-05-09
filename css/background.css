@@ -97,3 +97,22 @@
             url("../images/icons/icon-10.png") type("image/png")
     );
 }
+.img-icons-pattern-01 {
+    background-image: image-set(
+            url("../images/icons/pattern-01.webp") type("image/webp"),
+            url("../images/icons/pattern-01.png") type("image/png")
+    );
+}
+.img-icons-pattern-02 {
+    background-image: image-set(
+            url("../images/icons/pattern-02.webp") type("image/webp"),
+            url("../images/icons/pattern-02.png") type("image/png")
+    );
+}
+.img-icons-pattern-03 {
+    background-image: image-set(
+            url("../images/icons/pattern-03.webp") type("image/webp"),
+            url("../images/icons/pattern-03.png") type("image/png")
+    );
+}
+

@@ -10849,7 +10849,10 @@ img{
 	top: 100%;
 	width: 100%;
 	height: 560px;
-	background-image: url(../images/icons/waves-shape.png);
+	background-image: image-set(
+			url("../images/icons/waves-shape.webp") type("image/webp"),
+			url("../images/icons/waves-shape.png") type("image/png")
+	);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -15373,7 +15376,10 @@ img{
 	right:0;
 	width:138px;
 	height:8px;
-	background:url(../images/icons/pattern-04.png);
+	background-image: image-set(
+			url("../images/icons/pattern-04.webp") type("image/webp"),
+			url("../images/icons/pattern-04.png") type("image/png")
+	);
 	background-repeat:no-repeat;
 }
 
