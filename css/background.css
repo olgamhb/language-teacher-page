@@ -36,3 +36,16 @@
     );
 }
 
+/** Icons **/
+.img-icons-icon-01 {
+    background-image: image-set(
+            url("../images/icons/icon-01.webp") type("image/webp"),
+            url("../images/icons/icon-01.png") type("image/png")
+    );
+}
+.img-icons-icon-02 {
+    background-image: image-set(
+            url("../images/icons/icon-02.webp") type("image/webp"),
+            url("../images/icons/icon-02.png") type("image/png")
+    );
+}
