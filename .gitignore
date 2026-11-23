@@ -1,0 +1,9 @@
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Local tooling
+node_modules/
+_preview-*.html
+_site/

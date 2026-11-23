@@ -33,11 +33,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Stage public files
+        # Publish only the website, not repo metadata (.github, .idea, dotfiles, local previews).
+        run: |
+          rsync -a ./ _site/ \
+            --exclude '.*' \
+            --exclude '_site' \
+            --exclude '_preview-*' \
+            --exclude '_headers'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
