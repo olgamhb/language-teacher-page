@@ -1,634 +1,463 @@
-(function($) {
-	
-	"use strict";
-	
-	
-	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
-	}
-	
-	
-	//Update Header Style and Scroll to Top
-	function headerStyle() {
-		if($('.main-header').length){
-			var windowpos = $(window).scrollTop();
-			var siteHeader = $('.main-header');
-			var scrollLink = $('.scroll-to-top');
-			
-			var HeaderHight = $('.main-header').height();
-			if (windowpos >= HeaderHight) {
-				siteHeader.addClass('fixed-header');
-				scrollLink.fadeIn(300);
-			} else {
-				siteHeader.removeClass('fixed-header');
-				scrollLink.fadeOut(300);
-			}
-			
-		}
-	}
-	
-	headerStyle();
-	
-	
-	//Submenu Dropdown Toggle
-	if($('.main-header li.dropdown ul').length){
-		$('.main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
-		
-		//Dropdown Button
-		$('.main-header li.dropdown .dropdown-btn').on('click', function() {
-			$(this).prev('ul').slideToggle(500);
-		});
-		
-		//Dropdown Menu / Fullscreen Nav
-		$('.fullscreen-menu .navigation li.dropdown > a').on('click', function() {
-			$(this).next('ul').slideToggle(500);
-		});
-		
-		//Disable dropdown parent link
-		$('.navigation li.dropdown > a').on('click', function(e) {
-			e.preventDefault();
-		});
-		
-		//Disable dropdown parent link
-		$('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function(e) {
-			e.preventDefault();
-		});
-		
-		$('.filter-dropdown').mouseenter(function(){
-			$('.filter-categories').addClass('active');
-		});
+/*!
+ * Let's Talk BCN - page behaviour (replaces the LeBari template script).
+ * Needs jquery.js, owl.js and wow.js before it; meant to be loaded with `defer`.
+ */
+(function ($, window, document) {
+	'use strict';
 
-		$('.filter-dropdown').mouseleave(function(){
-			$('.filter-categories').removeClass('active');
-		});
-		
-	}
-	
-	
-	//Mobile Nav Hide Show
-	if($('.mobile-menu').length){
-		
-		$('.mobile-menu .menu-box').mCustomScrollbar();
-		
-		var mobileMenuContent = $('.main-header .nav-outer .main-menu').html();
-		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-		$('.sticky-header .main-menu').append(mobileMenuContent);
-		
-		//Dropdown Button
-		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
-			$(this).toggleClass('open');
-			$(this).prev('ul').slideToggle(500);
-		});
-		
-		//Menu Toggle Btn
-		$('.mobile-nav-toggler').on('click', function() {
-			$('body').addClass('mobile-menu-visible');
-		});
+	var root = document.documentElement;
+	var reducedMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+	var supportsSmoothScroll = 'scrollBehavior' in root.style;
 
-		//Menu Toggle Btn
-		$('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function() {
-			$('body').removeClass('mobile-menu-visible');
-		});
-		
-	}
-	
-	
-	//Custom Seclect Box
-	if($('.custom-select-box').length){
-		$('.custom-select-box').selectmenu().selectmenu('menuWidget').addClass('overflow');
+	// Labels for controls created or enhanced here, chosen by <html lang>.
+	var STRINGS = {
+		es: { openMenu: 'Abrir menú', closeMenu: 'Cerrar menú', toTop: 'Volver arriba', languages: 'Cambiar idioma', prev: 'Opinión anterior', next: 'Opinión siguiente' },
+		ca: { openMenu: 'Obre el menú', closeMenu: 'Tanca el menú', toTop: 'Torna a dalt', languages: "Canvia l'idioma", prev: 'Opinió anterior', next: 'Opinió següent' },
+		en: { openMenu: 'Open menu', closeMenu: 'Close menu', toTop: 'Back to top', languages: 'Change language', prev: 'Previous testimonial', next: 'Next testimonial' }
+	};
+	var text = STRINGS[(root.getAttribute('lang') || '').slice(0, 2).toLowerCase()] || STRINGS.en;
+
+	var CHEVRON_SVG = '<svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+
+	/* Helpers
+	   ------------------------------------------------------------------ */
+
+	function prefersReducedMotion() {
+		return !!(reducedMotionQuery && reducedMotionQuery.matches);
 	}
 
-	
-	
-	//Parallax Scene for Icons
-	if($('.parallax-scene-1').length){
-		var scene = $('.parallax-scene-1').get(0);
-		var parallaxInstance = new Parallax(scene);
+	function isActivateKey(event) {
+		return event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar' || event.which === 13 || event.which === 32;
 	}
-	if($('.parallax-scene-2').length){
-		var scene = $('.parallax-scene-2').get(0);
-		var parallaxInstance = new Parallax(scene);
+
+	function isEscapeKey(event) {
+		return event.key === 'Escape' || event.key === 'Esc' || event.which === 27;
 	}
-	if($('.parallax-scene-3').length){
-		var scene = $('.parallax-scene-3').get(0);
-		var parallaxInstance = new Parallax(scene);
+
+	function relatedTarget(event) {
+		return event.relatedTarget || (event.originalEvent && event.originalEvent.relatedTarget) || null;
 	}
-	if($('.parallax-scene-4').length){
-		var scene = $('.parallax-scene-4').get(0);
-		var parallaxInstance = new Parallax(scene);
+
+	function isVisible(el) {
+		return !!(el && (el.offsetWidth || el.offsetHeight || el.getClientRects().length));
 	}
-	
-	
-	
-	if($('.paroller').length){
-		$('.paroller').paroller({
-			  factor: 0.2,            // multiplier for scrolling speed and offset, +- values for direction control  
-			  factorLg: 0.4,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
-			  type: 'foreground',     // background, foreground  
-			  direction: 'horizontal' // vertical, horizontal  
-		});
-	}
-	
-	
-	
-	//Gallery Filters
-	if($('.filter-list').length){
-		$('.filter-list').mixItUp({});
-	}
-	
-	
-	//Fact Counter + Text Count
-	if($('.count-box').length){
-		$('.count-box').appear(function(){
-	
-			var $t = $(this),
-				n = $t.find(".count-text").attr("data-stop"),
-				r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-				
-			if (!$t.hasClass("counted")) {
-				$t.addClass("counted");
-				$({
-					countNum: $t.find(".count-text").text()
-				}).animate({
-					countNum: n
-				}, {
-					duration: r,
-					easing: "linear",
-					step: function() {
-						$t.find(".count-text").text(Math.floor(this.countNum));
-					},
-					complete: function() {
-						$t.find(".count-text").text(this.countNum);
+
+	// Button semantics + Enter/Space for controls that aren't a <button>
+	// (current markup, Owl arrows). Native buttons only get a missing label.
+	function asButton($elements, label) {
+		$elements.each(function () {
+			var el = this;
+			if (el.tagName !== 'BUTTON') {
+				if (!el.hasAttribute('role')) { el.setAttribute('role', 'button'); }
+				if (!el.hasAttribute('tabindex')) { el.setAttribute('tabindex', '0'); }
+				$(el).on('keydown', function (event) {
+					if (isActivateKey(event)) {
+						event.preventDefault();
+						$(el).trigger('click');
 					}
 				});
 			}
-			
-		},{accY: 0});
-	}
-	
-	
-	//Main Slider Carousel
-	if ($('.main-slider-carousel').length) {
-		$('.main-slider-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-    		animateIn: 'fadeIn',
-			loop:true,
-			margin:0,
-			nav:true,
-			autoHeight: true,
-			smartSpeed: 500,
-			autoplay: 6000,
-			navText: [ '<span class="flaticon-left-arrow-2"></span>', '<span class="flaticon-next-2"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:1
-				},
-				1200:{
-					items:1
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	// Single Item Carousel
-	if ($('.single-item-carousel').length) {
-		$('.single-item-carousel').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:1
-				}
-			}
-		});    		
-	}
-	
-
-	
-
-	// Testimonial Carousel
-	if ($('.testimonial-carousel').length) {
-		$('.testimonial-carousel').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:2
-				},
-				1024:{
-					items:2
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	// HM4 Testimonial Carousel
-	if ($('.hm4-testimonial-carousel').length) {
-		$('.hm4-testimonial-carousel').owlCarousel({
-			loop:true,
-			margin:30,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:2
-				},
-				1024:{
-					items:3
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	
-	// HM5 Testimonial Carousel
-	if ($('.hm5-testimonial-carousel').length) {
-		$('.hm5-testimonial-carousel').owlCarousel({
-			loop:true,
-			margin:30,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:2
-				},
-				1024:{
-					items:2
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	
-	// Testimonial Carousel Two
-	if ($('.testimonial-carousel-two').length) {
-		$('.testimonial-carousel-two').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:2
-				},
-				1024:{
-					items:3
-				},
-				1224:{
-					items:3
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	
-	
-	// Testimonial Carousel Three
-	if ($('.testimonial-carousel-three').length) {
-		$('.testimonial-carousel-three').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 5000,
-			navText: [ '<span><img src="images/icons/testimonial-left-arrow.png" alt="" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" /></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:2
-				},
-				1200:{
-					items:2
-				}
-			}
-		});    		
-	}
-	
-	
-	
-	//Progress Bar
-	if($('.progress-line').length){
-		$('.progress-line').appear(function(){
-			var el = $(this);
-			var percent = el.data('width');
-			$(el).css('width',percent+'%');
-		},{accY: 0});
-	}
-	
-	
-	
-	
-	// Sponsors Item Carousel
-	if ($('.sponsors-carousel').length) {
-		$('.sponsors-carousel').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:2
-				},
-				600:{
-					items:3
-				},
-				800:{
-					items:4
-				},
-				1024:{
-					items:5
-				}
-			}
-		});    		
-	}
-		
-	
-	
-	//Tabs Box
-	if($('.tabs-box').length){
-		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
-			e.preventDefault();
-			var target = $($(this).attr('data-tab'));
-			
-			if ($(target).is(':visible')){
-				return false;
-			}else{
-				target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
-				$(this).addClass('active-btn');
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab');
-				$(target).fadeIn(300);
-				$(target).addClass('active-tab');
-			}
+			if (label && !el.hasAttribute('aria-label')) { el.setAttribute('aria-label', label); }
 		});
 	}
-	
-	
-	
-	//Accordion Box
-	if($('.accordion-box, .accordion-box-two').length){
-		$(".accordion-box, .accordion-box-two").on('click', '.acc-btn', function() {
-			
-			var outerBox = $(this).parents('.accordion-box, .accordion-box-two');
-			var target = $(this).parents('.accordion');
-			
-			if($(this).hasClass('active')!==true){
-				$(outerBox).find('.accordion .acc-btn').removeClass('active');
-			}
-			
-			if ($(this).next('.acc-content').is(':visible')){
-				return false;
-			}else{
-				$(this).addClass('active');
-				$(outerBox).children('.accordion').removeClass('active-block');
-				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
-				target.addClass('active-block');
-				$(this).next('.acc-content').slideDown(300);	
-			}
-		});	
+
+	function focusElement(el) {
+		try { el.focus({ preventScroll: true }); } catch (err) { el.focus(); }
 	}
-	
-	
-	
-	//LightBox / Fancybox
-	if($('.lightbox-image').length) {
-		$('.lightbox-image').fancybox({
-			openEffect  : 'fade',
-			closeEffect : 'fade',
-			helpers : {
-				media : {}
+
+	// Elements whose visibility is still transitioning in can't take focus
+	// yet; retry for a few frames.
+	function focusWhenReady(el, attemptsLeft) {
+		if (!el) { return; }
+		if (attemptsLeft === undefined) { attemptsLeft = 20; }
+		focusElement(el);
+		if (document.activeElement !== el && attemptsLeft > 0) {
+			window.requestAnimationFrame(function () { focusWhenReady(el, attemptsLeft - 1); });
+		}
+	}
+
+	// Focus a scroll target; non-focusable ones get a temporary tabindex="-1"
+	// (Bootstrap's reboot removes the outline for it).
+	function moveFocusTo(el) {
+		if (!$(el).is('a[href], button, input, select, textarea, [tabindex]')) {
+			el.setAttribute('tabindex', '-1');
+			$(el).one('blur', function () { el.removeAttribute('tabindex'); });
+		}
+		focusElement(el);
+	}
+
+	// Smooth scroll (instant with reduced motion), then move focus there.
+	// The pinned-header offset comes from scroll-padding-top (initHeader).
+	function scrollToElement(el) {
+		var isPageTop = el === root || el === document.body;
+		if (supportsSmoothScroll && !prefersReducedMotion()) {
+			if (isPageTop) {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			} else {
+				el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
+		} else {
+			var previous = root.style.scrollBehavior;
+			root.style.scrollBehavior = 'auto'; // beat any CSS scroll-behavior: smooth
+			if (isPageTop) { window.scrollTo(0, 0); } else { el.scrollIntoView(true); }
+			root.style.scrollBehavior = previous;
+		}
+		moveFocusTo(isPageTop ? document.body : el);
+	}
+
+	// rAF-throttled width changes (mobile URL-bar height changes are ignored).
+	var widthCallbacks = [];
+	var lastWidth = window.innerWidth;
+	var resizeQueued = false;
+
+	function onWidthChange(callback) {
+		widthCallbacks.push(callback);
+	}
+
+	window.addEventListener('resize', function () {
+		if (resizeQueued) { return; }
+		resizeQueued = true;
+		window.requestAnimationFrame(function () {
+			resizeQueued = false;
+			if (window.innerWidth === lastWidth) { return; }
+			lastWidth = window.innerWidth;
+			for (var i = 0; i < widthCallbacks.length; i++) { widthCallbacks[i](); }
+		});
+	}, { passive: true });
+
+
+	/* Fixed header + scroll-to-top button
+	   ------------------------------------------------------------------ */
+
+	function initHeader() {
+		var header = document.querySelector('.main-header');
+		if (!header) { return; }
+		var $header = $(header);
+		var $scrollTop = $('.scroll-to-top');
+		var threshold = 0;
+		var isFixed = null;
+		var queued = false;
+
+		// All layout reads live here (init, load, fonts, width change), never in the scroll path.
+		function measure() {
+			var wasFixed = $header.hasClass('fixed-header');
+			$header.removeClass('fixed-header');
+			threshold = $header.height();
+			// Apply .fixed-header for a moment (nothing paints in between) to see
+			// whether it pins the header (fixed on desktop, sticky at 768–1023px) and how tall it is then.
+			$header.addClass('fixed-header');
+			var pinnedPosition = window.getComputedStyle(header).position;
+			var pinnedHeight = (pinnedPosition === 'fixed' || pinnedPosition === 'sticky') ? header.offsetHeight : 0;
+			$header.toggleClass('fixed-header', wasFixed);
+			// Keeps anchor targets and focused elements out from under the pinned header.
+			root.style.scrollPaddingTop = pinnedHeight ? pinnedHeight + 'px' : '';
+		}
+
+		function update() {
+			queued = false;
+			var fixed = (window.pageYOffset || root.scrollTop) >= threshold;
+			if (fixed === isFixed) { return; }
+			isFixed = fixed;
+			$header.toggleClass('fixed-header', fixed);
+			$scrollTop.stop(true, true)[fixed ? 'fadeIn' : 'fadeOut'](300);
+		}
+
+		function remeasure() {
+			measure();
+			update();
+		}
+
+		remeasure();
+		window.addEventListener('scroll', function () {
+			if (queued) { return; }
+			queued = true;
+			window.requestAnimationFrame(update);
+		}, { passive: true });
+		onWidthChange(remeasure);
+		if (document.readyState !== 'complete') { $(window).one('load', remeasure); }
+		if (document.fonts && document.fonts.ready) { document.fonts.ready.then(remeasure); }
+	}
+
+
+	/* Desktop language submenu
+	   Hover is pure CSS. This adds click/Enter toggling (li.is-open, which the
+	   CSS must also show), Escape, close on focus-out / outside click, and
+	   keeps aria-expanded in sync.
+	   ------------------------------------------------------------------ */
+
+	function initDesktopDropdown() {
+		$('.main-header .main-menu .navigation li.dropdown').each(function () {
+			var $item = $(this);
+			var $link = $item.children('a').first();
+			var hovered = false;
+			var pinned = false;
+			if (!$item.children('ul').length) { return; }
+
+			function sync() {
+				$item.toggleClass('is-open', pinned);
+				$link.attr('aria-expanded', String(pinned || hovered));
+			}
+
+			function close() {
+				if (pinned) { pinned = false; sync(); }
+			}
+
+			$link.attr('aria-expanded', 'false').on('click', function (event) {
+				event.preventDefault(); // href is "#" (or "javascript:")
+				pinned = !pinned;
+				sync();
+			});
+
+			$item.on('mouseenter', function () { hovered = true; sync(); })
+				.on('mouseleave', function () { hovered = false; sync(); })
+				.on('focusout', function (event) {
+					var next = relatedTarget(event);
+					if (!next || !$.contains(this, next)) { close(); }
+				})
+				.on('keydown', function (event) {
+					if (pinned && isEscapeKey(event)) {
+						close();
+						$link[0].focus();
+					}
+				});
+
+			$(document).on('click', function (event) {
+				if (pinned && !$.contains($item[0], event.target)) { close(); }
+			});
 		});
 	}
-	
-	
-	//Contact Form Validation
-	if($('#contact-form').length){
-		$('#contact-form').validate({
-			rules: {
-				username: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				phone: {
-					required: true
-				},
-				message: {
-					required: true
-				}
+
+
+	/* Mobile menu
+	   ------------------------------------------------------------------ */
+
+	function initMobileMenu() {
+		var $menu = $('.mobile-menu').first();
+		var $source = $('.main-header .nav-outer .main-menu').first();
+		var $toggler = $('.mobile-nav-toggler').first();
+		if (!$menu.length || !$source.length || !$toggler.length) { return null; }
+		var $closeBtn = $menu.find('.close-btn').first();
+		var $body = $(document.body);
+
+		// Copy the desktop nav into the panel.
+		var $copy = $('<div>').append($source.children().clone());
+		$copy.find('.navbar-header').remove();          // Bootstrap toggler: never visible, inert here
+		$copy.find('[id]').removeAttr('id');             // no duplicate IDs
+		$copy.find('.collapse').removeClass('collapse'); // stay visible without the #navbarSupportedContent CSS rule
+		$copy.find('li.dropdown').each(function () {
+			var $item = $(this);
+			if (!$item.children('ul').length) { return; }
+			var $btn = $('<div class="dropdown-btn" role="button" tabindex="0" aria-expanded="false"></div>')
+				.attr('aria-label', text.languages)
+				.html(CHEVRON_SVG);
+			// Right after the link so the tab order is link, toggle, submenu items.
+			$item.children('a').first().attr('aria-expanded', 'false').after($btn);
+		});
+		$menu.find('.menu-outer').append($copy.children());
+
+		// Submenu: the chevron button and the parent link both toggle it.
+		function toggleSubmenu($item) {
+			var $btn = $item.children('.dropdown-btn');
+			var open = $btn.attr('aria-expanded') !== 'true';
+			$btn.toggleClass('open', open).attr('aria-expanded', String(open));
+			$item.children('a').first().attr('aria-expanded', String(open));
+			$item.children('ul').stop(true, true)[open ? 'slideDown' : 'slideUp'](500);
+		}
+
+		$menu.on('click', 'li.dropdown > .dropdown-btn', function () {
+			toggleSubmenu($(this).parent());
+		}).on('keydown', 'li.dropdown > .dropdown-btn', function (event) {
+			if (isActivateKey(event)) {
+				event.preventDefault();
+				toggleSubmenu($(this).parent());
+			}
+		}).on('click', 'li.dropdown > a', function (event) {
+			event.preventDefault();
+			toggleSubmenu($(this).parent());
+		});
+
+		// Open / close.
+		if (!$menu.attr('id')) { $menu.attr('id', 'mobile-menu'); }
+		asButton($toggler, text.openMenu);
+		asButton($closeBtn, text.closeMenu);
+		$toggler.attr({ 'aria-controls': $menu.attr('id'), 'aria-expanded': 'false' });
+
+		function isOpen() {
+			return $body.hasClass('mobile-menu-visible');
+		}
+
+		function focusableItems() {
+			return $menu.find('a[href], button:not([disabled]), [tabindex="0"]').filter(function () {
+				return isVisible(this);
+			});
+		}
+
+		function onKeydown(event) {
+			if (isEscapeKey(event)) {
+				event.preventDefault();
+				close(true);
+				return;
+			}
+			if (event.key !== 'Tab' && event.which !== 9) { return; }
+			// Keep Tab inside the open panel.
+			var $items = focusableItems();
+			var first = $items[0];
+			var last = $items[$items.length - 1];
+			var active = document.activeElement;
+			if (!first) { return; }
+			if (!$.contains($menu[0], active)) {
+				event.preventDefault();
+				first.focus();
+			} else if (event.shiftKey && active === first) {
+				event.preventDefault();
+				last.focus();
+			} else if (!event.shiftKey && active === last) {
+				event.preventDefault();
+				first.focus();
+			}
+		}
+
+		function open() {
+			if (isOpen()) { return; }
+			$body.addClass('mobile-menu-visible');
+			$toggler.attr('aria-expanded', 'true');
+			$(document).on('keydown.mobileMenu', onKeydown);
+			focusWhenReady($closeBtn[0] || focusableItems()[0]);
+		}
+
+		// restoreFocus is false when focus goes somewhere else (a section).
+		function close(restoreFocus) {
+			if (!isOpen()) { return; }
+			$body.removeClass('mobile-menu-visible');
+			$toggler.attr('aria-expanded', 'false');
+			$(document).off('keydown.mobileMenu');
+			if (restoreFocus && isVisible($toggler[0])) { $toggler[0].focus(); }
+		}
+
+		$toggler.on('click', open);
+		$menu.on('click', '.menu-backdrop, .close-btn', function () { close(true); });
+
+		// The panel only exists for small screens; close it if the viewport grows.
+		onWidthChange(function () {
+			if (isOpen() && !isVisible($toggler[0])) { close(false); }
+		});
+
+		return { element: $menu[0], close: close };
+	}
+
+
+	/* In-page anchors and .scroll-to-target
+	   ------------------------------------------------------------------ */
+
+	function initScrollLinks(mobileMenu) {
+		$(document).on('click', 'a[href^="#"]', function (event) {
+			var hash = this.getAttribute('href');
+			var target = hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+			if (!target) { return; } // incl. "#" (submenu parent, handled above)
+			event.preventDefault();
+			if (mobileMenu && $.contains(mobileMenu.element, this)) { mobileMenu.close(false); }
+			scrollToElement(target);
+		});
+
+		asButton($('.scroll-to-top'), text.toTop);
+
+		$(document).on('click', '.scroll-to-target', function (event) {
+			var target;
+			try { target = document.querySelector(this.getAttribute('data-target') || 'html'); } catch (err) { target = null; }
+			if (!target) { return; }
+			event.preventDefault();
+			scrollToElement(target);
+		});
+	}
+
+
+	/* Testimonial carousel
+	   ------------------------------------------------------------------ */
+
+	function initTestimonials() {
+		var $carousel = $('.testimonial-carousel-three');
+		if (!$carousel.length || !$.fn.owlCarousel) { return; }
+		var animate = !prefersReducedMotion();
+
+		// Hide loop clones from screen readers (otherwise every quote is read twice).
+		$carousel.on('refreshed.owl.carousel', function () {
+			$carousel.find('.owl-item').removeAttr('aria-hidden')
+				.filter('.cloned').attr('aria-hidden', 'true');
+		});
+
+		$carousel.owlCarousel({
+			loop: true,
+			margin: 0,
+			nav: true,
+			smartSpeed: animate ? 500 : 0,
+			autoplay: animate,     // previously `autoplay: 5000`, which Owl only reads as "on"
+			autoplayTimeout: 5000, // Owl's default, now explicit
+			navText: ['<span><img src="images/icons/testimonial-left-arrow.png" alt="" width="50" height="50" /></span>', '<span><img src="images/icons/testimonial-right-arrow.png" alt="" width="50" height="50" /></span>'],
+			responsive: {
+				0: { items: 1 },
+				600: { items: 1 },
+				800: { items: 1 },
+				1024: { items: 2 },
+				1200: { items: 2 }
 			}
 		});
-	}
-	
-	
-	
-	// Scroll to a Specific Div
-	if($('.scroll-to-target').length){
-		$(".scroll-to-target").on('click', function() {
-			var target = $(this).attr('data-target');
-		   // animate
-		   $('html, body').animate({
-			   scrollTop: $(target).offset().top
-			 }, 1500);
-	
-		});
-	}
-	
-	
-	
-	// Elements Animation
-	if($('.wow').length){
-		var wow = new WOW(
-		  {
-			boxClass:     'wow',      // animated element css class (default is wow)
-			animateClass: 'animated', // animation css class (default is animated)
-			offset:       0,          // distance to the element when triggering the animation (default is 0)
-			mobile:       true,       // trigger animations on mobile devices (default is true)
-			live:         true       // act on asynchronously loaded content (default is true)
-		  }
-		);
-		wow.init();
-	}
-	
-	
-	
-	
-	
-	//Header Search
-	if($('.search-box-outer').length) {
-		$('.search-box-outer').on('click', function() {
-			$('body').addClass('search-active');
-		});
-		$('.close-search').on('click', function() {
-			$('body').removeClass('search-active');
-		});
-	}
-	
-	// Sponsors Carousel
-	if ($('.sponsors-carousel').length) {
-		$('.sponsors-carousel').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 4000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:2
-				},
-				600:{
-					items:3
-				},
-				800:{
-					items:4
-				},
-				1024:{
-					items:5
-				}
-			}
-		});    		
+
+		// Owl 2.1 renders the arrows as <div>s.
+		asButton($carousel.find('.owl-nav .owl-prev'), text.prev);
+		asButton($carousel.find('.owl-nav .owl-next'), text.next);
+
+		// Don't rotate slides away while keyboard focus is on the arrows.
+		if (animate) {
+			$carousel.on('focusin', function () {
+				$carousel.trigger('stop.owl.autoplay');
+			}).on('focusout', function (event) {
+				var next = relatedTarget(event);
+				if (!next || !$.contains($carousel[0], next)) { $carousel.trigger('play.owl.autoplay'); }
+			});
+		}
 	}
 
 
-/* ==========================================================================
-   When document is Scrollig, do
-   ========================================================================== */
-	
-	$(window).on('scroll', function() {
-		headerStyle();
-	});
-	
-/* ==========================================================================
-   When document is loading, do
-   ========================================================================== */
-	
-	$(window).on('load', function() {
-		handlePreloader();
-	});
+	/* WOW reveal animations
+	   ------------------------------------------------------------------ */
+
+	function initWow() {
+		var $boxes = $('.wow');
+		if (!$boxes.length) { return; }
+		if (prefersReducedMotion() || typeof window.WOW !== 'function') {
+			$boxes.css({ visibility: 'visible', animationName: 'none' });
+			return;
+		}
+		new window.WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: false // static content: lets WOW stop polling once everything has animated
+		}).init();
+	}
 
 
+	/* Start
+	   ------------------------------------------------------------------ */
 
+	function init() {
+		$.fx.off = prefersReducedMotion(); // jQuery fades/slides become instant
+		var mobileMenu = initMobileMenu();
+		initDesktopDropdown();
+		initHeader();
+		initScrollLinks(mobileMenu);
+		initTestimonials();
+		initWow();
+	}
 
+	// With `defer` the DOM is parsed by now; start immediately so WOW hides
+	// its elements as early as possible.
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
 
-	// Seleccionar todos los enlaces que apuntan a un ancla
-        document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-            enlace.addEventListener('click', function(evento) {
-                evento.preventDefault(); // Prevenir el comportamiento por defecto
-
-                // Obtener el destino del enlace
-                const destino = document.querySelector(this.getAttribute('href'));
-
-                if (destino) {
-                    destino.scrollIntoView({
-                        behavior: 'smooth' // Desplazamiento suave
-                    });
-                }
-            });
-        });
-        	
-
-})(window.jQuery);
+})(window.jQuery, window, document);
